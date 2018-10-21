@@ -1,0 +1,20 @@
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  max-width: 50%;
+  min-height: 150px;
+  margin: 0px auto;
+}
+.card-title{
+  /* text-align: center; */
+  margin: 54px auto;
+}

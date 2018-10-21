@@ -1,2 +1,2 @@
-import {default} from './Card.js'
-import {default} from './CardContent.js'
+export * from './Card.js'
+export * from './CardContent.js'

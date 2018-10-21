@@ -1,2 +1,1 @@
-import {default} from 'navbar.js'
-import {default} from 'navtabs.js'
+export * from './Navtabs.js';
