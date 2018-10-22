@@ -1,8 +1,22 @@
-ul.nav{
+nav{
   display:flex;
-  list-style-type: none;
-  
+  /*      flex-direction:column;
+ */
+  margin: 50px auto;
 }
-ul.nav li{
-  margin: 0px 30px;
+ .nav-tab{
+    padding: 15px 20px;
+
+ }
+ .nav-tab:hover{
+   cursor: pointer;
+   color: #2D342D;
+   text-decoration: none;
+ }
+
+ @media screen and (max-width: 600px) {
+  nav {
+    margin-left: 6%;
+    margin-top: -50px;
+  }
 }

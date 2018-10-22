@@ -2,23 +2,23 @@ import React from "react";
 import "./nav.css"
 class Navtabs extends React.Component{
   state = {
-    page: "home"
+    page: "home",
+    hidden: false
   }
+
+
   render(){
     return (
-      <nav>
-        <ul className="nav">
-          <li>
-            {/* Who I am */}
+      <nav id='navbar'>
+          <div className="nav-tab">
             Introduction
-          </li>
-          <li>
+          </div>
+          <div className="nav-tab">
             Portfolio
-          </li>
-          <li>
+          </div>
+          <div className="nav-tab">
             Contact
-          </li>
-        </ul>
+          </div>
       </nav>
     )
   }

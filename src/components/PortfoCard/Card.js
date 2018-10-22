@@ -1,8 +1,11 @@
 import React from "react";
 import "./Card.css"
-const Card = (props) => (
+const Card = ({title,children}) => (
   <div className="card">
-      <h1 className="card-title"> {props.title}</h1>
+      <h2 className="card-title"> {title}</h2>
+      <div>
+      {children}
+      </div>
   </div>
 
 );
