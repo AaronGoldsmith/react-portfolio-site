@@ -6,9 +6,8 @@ class Navtabs extends React.Component{
   }
 
   handleClick = (item) => {
-    console.log(document.all);
-    item.target.scrollIntoView(200);
-    console.log(item.target.className.split(' ')[1])
+    this.setState({page:item.target.className.split(' ')[1]});
+    item.target.scrollIntoView();
   }
 
 

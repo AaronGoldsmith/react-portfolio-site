@@ -7,6 +7,24 @@
   font-size: 2.2em;
   font-family: 'Pontano Sans', sans-serif;
 }
+
+i.fa-caret-right,i.fa-caret-left{
+  color: rgba(0, 0, 0, 0.26);
+  font-size: 2em;
+  top: 50%;
+  position: absolute;
+}
+i.fa-caret-right{
+  right: 20px;
+}
+i.fa-caret-left{
+  left: 20px;
+}
+i.fa-caret-right:hover,i.fa-caret-left:hover{
+  color:#000;
+  cursor: pointer;
+}
+
 #contact-email{
   padding: 0px;
   margin:0px;
@@ -35,6 +53,7 @@
   .avatar{
     margin: 0px 60px 30px 0px;
   }
+
   .myname span{
     top: 0px;
     display:inline-block;
@@ -52,5 +71,9 @@
   .myname{
    margin-left: 30px;
    text-align: left !important;
+  }
+  .App-header{
+    margin-top: -100px;
+    padding-top: 0px !important;
   }
 }

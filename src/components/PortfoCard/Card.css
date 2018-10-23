@@ -18,14 +18,17 @@
   font-size: 2em;
 }
 .card-content{
-  padding: 0px 40px;
+  padding: 0px 60px;
+  min-height: 50px;
   text-align: justify;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 32px;
 }
 
 @media screen and (max-width: 750px) {
   .card{
     max-width:95%;
-    height: 50px;
+    min-height: 50px;
   }
   .card-content{
     overflow:hidden;
