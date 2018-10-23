@@ -13,9 +13,13 @@ code {
     monospace;
 }
 
-.bg-standard{
-   background: #F1FFFA;
+.bg-standard,body{
+   background-color: #F1FFFA;
 }
 .accent-standard{
   border: 2px solid #BF4E30;
+}
+
+.fa-chevron-up{
+  z-index: 50;
 }

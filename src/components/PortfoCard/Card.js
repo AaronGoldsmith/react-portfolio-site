@@ -1,12 +1,9 @@
 import React from "react";
 import "./Card.css"
-const Card = ({title,children}) => (
-  <div className="card">
-      <h2 className="card-title"> {title}</h2>
-      <div>
+export const Card = ({title, children}) => (
+  <div className="card sy">
+      <h2 className="card-title text-center"> {title}</h2>
       {children}
-      </div>
   </div>
 
 );
-export default Card;

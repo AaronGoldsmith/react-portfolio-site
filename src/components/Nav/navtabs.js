@@ -3,20 +3,25 @@ import "./nav.css"
 class Navtabs extends React.Component{
   state = {
     page: "home",
-    hidden: false
+  }
+
+  handleClick = (item) => {
+    console.log(document.all);
+    item.target.scrollIntoView(200);
+    console.log(item.target.className.split(' ')[1])
   }
 
 
   render(){
     return (
       <nav id='navbar'>
-          <div className="nav-tab">
+          <div onClick={this.handleClick} className="nav-tab intro">
             Introduction
           </div>
-          <div className="nav-tab">
+          <div onClick={this.handleClick} className="nav-tab folio">
             Portfolio
           </div>
-          <div className="nav-tab">
+          <div onClick={this.handleClick} className="nav-tab cont">
             Contact
           </div>
       </nav>

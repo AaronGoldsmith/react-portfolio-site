@@ -1,8 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
 .text-center{
   text-align: center;
 }
 .App-header {
-  background-color: #93B7BE;
+
+  background-color: rgba(147, 183, 190, 0.758);
+
   min-height: 80vh;
   display: flex;
   padding-top: 60px;
@@ -13,6 +18,11 @@
   color: white;
   border-bottom: 7px solid #BF4E30;
 }
+.bg{
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/stripes-light.png') repeat;
+  background-blend-mode: overlay;
+}
+
 div.avatar{
   height: 240px;
   width: 240px;
@@ -53,7 +63,7 @@ div.avatar > img{
    text-shadow: 0px 0px 3px #2D342D;}
 
 .fa-chevron-up{
-  font-size: 4em;
+  font-size: 3.5em;
   opacity: 0.4;
   position:fixed;
   bottom: 40px;
@@ -65,9 +75,8 @@ div.avatar > img{
 }
 
 
-
-@media screen and (max-width: 600px) {
-  .App-header{
-    justify-content: flex-start;
-  }
+.sy{
+  margin-top: 150px;
+  margin-bottom: 150px;
+  padding-bottom: 50px;
 }

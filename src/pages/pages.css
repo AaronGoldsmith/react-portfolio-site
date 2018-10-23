@@ -3,16 +3,23 @@
   margin: 0px 20px 30px 20px;
 }
 .myname{
-  width: 200px;
-  font-size: 2em;
+  width: 220px;
+  font-size: 2.2em;
   font-family: 'Pontano Sans', sans-serif;
 }
-.contact-email{
+#contact-email{
   padding: 0px;
   margin:0px;
+  text-decoration:none;
   font-size: 0.6em;
-  float:right;
+  position: absolute;
+  right:10px;
+  top: 10px;
 }
+#contact-email:hover{
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 800px) {
   .myname{
     margin-left: 0px;
@@ -25,8 +32,10 @@
     max-height: 45%;
     max-width: 45%;
   }
- 
-  .myname > span{
+  .avatar{
+    margin: 0px 60px 30px 0px;
+  }
+  .myname span{
     top: 0px;
     display:inline-block;
     position: relative;

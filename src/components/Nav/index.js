@@ -1,1 +1,2 @@
-export * from './Navtabs.js';
+export * from './Navtabs';
+export * from './Chevron'

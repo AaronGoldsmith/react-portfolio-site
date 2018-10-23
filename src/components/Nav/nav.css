@@ -16,7 +16,7 @@ nav{
 
  @media screen and (max-width: 600px) {
   nav {
-    margin-left: 6%;
+    left: 50%;
     margin-top: -50px;
   }
 }

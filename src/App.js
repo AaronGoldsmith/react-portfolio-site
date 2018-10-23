@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import Home from "./pages/home"
+import About from "./pages/About"
 import './App.css';
 
 class App extends Component {
-  state = {hiddenIcon:false}
+  state = {scrolledDown:false}
 
-  handleScroll = () =>{
-    if(window.scrollY>260){
-      this.setState({hiddenIcon:false})
+  handleScroll = () => {
+    if(window.scrollY>=260){
+      this.setState({scrolledDown:false})
     }
     else{
-      this.setState({hiddenIcon:true})
+      this.setState({scrolledDown:true})
     }
   }
   handleChevron = () => {
@@ -20,7 +21,9 @@ class App extends Component {
   }
   
   componentDidMount(){
+    this.setState({scrolledDown:true})
     window.addEventListener('scroll', this.handleScroll);
+
   }
 
   componentWillUnmount(){
@@ -30,8 +33,8 @@ class App extends Component {
     return (
       <div className="App">
         <Home />
-        {(!this.state.hiddenIcon)?
-        <i onClick={this.handleChevron} className="fas fa-chevron-up"></i>:<span></span>}
+            {((!this.state.scrolledDown)?<i onClick={this.handleChevron} className="fas fa-chevron-up"></i>:<i></i>)}
+        <About />
       </div>
     );
   }
