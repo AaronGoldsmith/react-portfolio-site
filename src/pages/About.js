@@ -1,22 +1,37 @@
 import React from 'react';
 import {Card,CardContent} from "../components/PortfoCard/"
+import Pagination from "../components/Nav/Pagination"
 import "./pages.css"
 
  class About extends React.Component {
    state = {
       cards: [],
    }
-   handleNext = (cardBtn) => {
+
+   linArr = (n) => {
+      let arr = [];
+      for(var i = 0;i<n;i++){
+        arr.push(i);
+      }
+      return arr;
+  }
+   handleCardChange = (cardBtn) => {
      let cardID = cardBtn.target.id
      let current = this.state.cards;
-     if(current[cardID].index >= (current[cardID].slides)){
-      current[cardID].index=0;
+     let dir = cardBtn.target.className.split('-')[2];
+     if(dir === 'right'){
+      if(current[cardID].index >= (current[cardID].slides)){
+        current[cardID].index=0;
+       }
+       else{
+        current[cardID].index++;
+       }
      }
-     else{
-      current[cardID].index++;
+     else if(current[cardID].index >=0 )
+     {
+        current[cardID].index--;
      }
      this.setState({cards:current})
-
    }
    componentDidMount() {
      this.setState({
@@ -62,24 +77,26 @@ import "./pages.css"
   render(){
     return (
     <section id="intro">
-    {/* CARD 1 */}
     {this.state.cards.map((card,i) => (
       <Card title={card.title} key={card.title} >
           <CardContent>
-          {card.content[card.index]}
-          { 
-              // handle conditional render icon right
-              (card.index<card.slides-1?
-              <i onClick={this.handleNext} id={i} className="fa fa-caret-right"></i>:
+            { 
+              card.content[card.index]// display card content
+            }
+              {(card.index<card.slides-1?
+              <i onClick={this.handleCardChange} id={i} className="fa fa-caret-right"></i>:
               <span></span>)
-          }
-          {
-             // handle conditional render icon right
+              }
+              {
+          // conditional render icon right
               (card.index>0?
-              <i onClick={this.handlePrev} id={i} className="fa fa-caret-left"></i>:
+              <i onClick={this.handleCardChange} id={i} className="fa fa-caret-left"></i>:
               <span></span>)
           }
+
         </CardContent>
+        <Pagination className="align-center" selected={card.index} size={this.linArr(card.slides)}/>
+
       </Card>
 
     ))}

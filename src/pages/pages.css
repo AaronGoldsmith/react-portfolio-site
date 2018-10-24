@@ -24,7 +24,10 @@ i.fa-caret-right:hover,i.fa-caret-left:hover{
   color:#000;
   cursor: pointer;
 }
-
+.pagination{
+  margin: 0px auto;
+  display: inherit;
+}
 #contact-email{
   padding: 0px;
   margin:0px;
@@ -36,6 +39,9 @@ i.fa-caret-right:hover,i.fa-caret-left:hover{
 }
 #contact-email:hover{
   text-decoration: underline;
+}
+.portfolio-page{
+  height:1000px;
 }
 
 @media screen and (max-width: 800px) {
