@@ -4,14 +4,43 @@ nav{
 }
  .nav-tab{
     padding: 15px 20px;
-
  }
- .nav-tab:hover{
+ a {
+   text-decoration: none !important;
+   color: white;
+ }
+ .nav-tab:hover,a:hover{
    cursor: pointer;
    color: #2D342D;
    text-decoration: none;
  }
+ .circle {
+  height: 8px;
+  width: 8px;
+  border: 1px solid black;
+  background: white;
+  border-radius: 50%;
+  margin: 5px;
+}
+.circle:not(.selected):hover {
+  background-color: #666;
+  border-radius: 50%;
 
+}
+.circle:active {
+  background-color: #333;
+}
+.selected{
+  background-color: #333;
+  border: 1px solid #333;
+  transition: all 1s ease-out;
+
+}
+.pagination{
+	padding: 5px;
+	display: inline-flex;
+  border-radius: 5%;
+}
  @media screen and (max-width: 600px) {
   nav#navbar{
     margin-top: -350px;
