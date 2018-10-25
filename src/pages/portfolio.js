@@ -1,7 +1,16 @@
-import React from "react";
-const Portfolio = (props) => (
+import React from "react"
+import PortfoFrame from "../components/PortfoGrid/PortfoFrame"
+const Portfolio = () => (
   <div className="portfolio-page" >
-     <h1>HELLO WORLD</h1>
+    <section>
+      <h1>Web Development</h1>
+      <h3>These items were projects or assignments I submitted while attending the UC Berkeley Boot camp</h3>
+      <PortfoFrame />
+    </section>
+    <section>
+      <h1></h1>
+      <PortfoFrame />
+    </section>
   </div>
 );
 export default Portfolio;

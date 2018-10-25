@@ -27,14 +27,11 @@ nav{
   border-radius: 50%;
 
 }
-.circle:active {
-  background-color: #333;
-}
+
 .selected{
   background-color: #333;
   border: 1px solid #333;
   transition: all 1s ease-out;
-
 }
 .pagination{
 	padding: 5px;
@@ -43,11 +40,10 @@ nav{
 }
  @media screen and (max-width: 600px) {
   nav#navbar{
-    margin-top: -350px;
+    margin-top: -250px;
     width: 400px;
     flex-direction: column;
     text-align: center;
-    /* display: flow-root; */
   }
 
 }

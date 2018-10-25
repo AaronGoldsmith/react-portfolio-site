@@ -8,42 +8,29 @@
   font-family: 'Pontano Sans', sans-serif;
 }
 
-i.fa-caret-right,i.fa-caret-left{
-  color: rgba(0, 0, 0, 0.26);
-  font-size: 2em;
-  top: 50%;
-  position: absolute;
-}
-i.fa-caret-right{
-  right: 20px;
-}
-i.fa-caret-left{
-  left: 20px;
-}
-i.fa-caret-right:hover,i.fa-caret-left:hover{
-  color:#000;
-  cursor: pointer;
-}
 .pagination{
   margin: 0px auto;
   display: inherit;
 }
-#contact-email{
+
+.social-wrap
+{
+  display: flex;
+  flex-direction: column;
   padding: 0px;
-  margin:0px;
+  width: 100%;
   text-decoration:none;
   font-size: 0.6em;
-  position: absolute;
-  right:10px;
-  top: 10px;
-}
-#contact-email:hover{
-  text-decoration: underline;
+  float:left;
 }
 .portfolio-page{
-  height:1000px;
+  height:100%;
 }
-
+.online-links{
+  position: absolute;
+  right: -25px;
+  top: 15px;
+}
 @media screen and (max-width: 800px) {
   .myname{
     margin-left: 0px;
@@ -67,19 +54,34 @@ i.fa-caret-right:hover,i.fa-caret-left:hover{
     top: -290px;
     left: 100px;
   }
-  i.fab{
-    top: -50px;
-    position: relative;
-    transition: top 1.5ms;
-  }
 }
 @media screen and (max-width:400px){
   .myname{
    margin-left: 30px;
    text-align: left !important;
   }
-  .App-header{
-    margin-top: -100px;
-    padding-top: 0px !important;
-  }
+}
+
+i.fa-envelope,i.fa-envelope-open{
+  position: absolute;
+  font-size: 1.3em;
+  z-index: 2;
+  right: 65px;
+  top: 17px;
+}
+i.fa-caret-right,i.fa-caret-left{
+  color: rgba(0, 0, 0, 0.26);
+  font-size: 2em;
+  top: 50%;
+  position: absolute;
+}
+i.fa-caret-right{
+  right: 20px;
+}
+i.fa-caret-left{
+  left: 20px;
+}
+i.fa-caret-right:hover,i.fa-caret-left:hover{
+  color:#000;
+  cursor: pointer;
 }

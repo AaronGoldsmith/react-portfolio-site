@@ -11,9 +11,12 @@ class Navtabs extends React.Component{
   handleClick = (item) => {
     this.setState({page:item.target.className.split(' ')[1]});
     setTimeout(function(){
-      window.scrollBy(0,window.innerHeight)
+      let el = document.getElementById('navbar');
+
+      // window.scrollBy(0,el.pageYOffset)
+      el.scrollIntoView();
+
     });
-    item.target.scrollIntoView();
   }
 
 
@@ -28,8 +31,6 @@ class Navtabs extends React.Component{
           <div onClick={this.handleClick} className="nav-tab folio">
             <Link to="/portfolio">Portfolio</Link></div>
 
-          <div onClick={this.handleClick} className="nav-tab cont">
-            <Link to="/portfolio">Contact</Link></div>
       </nav>
     )
   }

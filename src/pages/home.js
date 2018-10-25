@@ -8,6 +8,7 @@ class Home extends Component
 
   state = {
     scrolledDown:false,
+    opened: false,
     page:'about'
   }
 
@@ -21,11 +22,26 @@ class Home extends Component
   }
   handleChevron = () => {
     if(window.scrollY>50){
-      window.scroll(0,-1)
+      window.scrollTo(0,0)
     }
   }
-  
+  handleEnvelope = () =>
+  {
+    var email = document.getElementById('contact-email');
+    email.href = '';
+    var rqst = 'mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A'
+    if(this.state.opened===true){
+      if(window.confirm('You might have already sent an email. Want to start another anyway?')){
+        email.href=rqst;
+      }
+    }
+    else{
+      email.href=rqst;
+      this.setState({opened: true})
+    }
+  }
   componentDidMount(){
+    window.scrollTo(0,25)
     this.setState({scrolledDown:true})
     window.addEventListener('scroll', this.handleScroll);
 
@@ -38,22 +54,26 @@ class Home extends Component
     return (
       <div className="bg" id="app">
         <header className="App-header">
-          <i class="fas fa-envelope"></i>
+        <div className="social-wrap">
+              <a id='contact-email'  onMouseUp={this.handleEnvelope} rel="noopener no referrer"  target='_blank' href="mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A">
+                  <i className={`fas fa-envelope${this.state.opened?'-open':''}`} />
+              </a>
+              <div className="online-links">
+                <a className="App-link" href="https://github.com/AaronGoldsmith" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-github"></i>
+                </a>
+                <a className="App-link" href="https://www.linkedin.com/in/aarongoldsmith-1/" alt='LinkedIn' target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+              </div>
+          </div>
           <div className="avatar">
             <img src={myself} alt='Aaron Goldsmith'></img>
           </div>
           <h2 className="text-center myname">
             <span id="first">Aaron </span><span id="last">Goldsmith</span>
           </h2>
-          <a id='contact-email' href="mailto:agoldsmith@alumni.scu.edu">agoldsmith@alumni.scu.edu</a>
-          <div>
-            <a className="App-link" href="https://github.com/AaronGoldsmith" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github"></i>
-            </a>
-            <a className="App-link" href="https://www.linkedin.com/in/aarongoldsmith-1/" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i>
-            </a>
-          </div>
+          
           <Navtabs />
         </header>
         {((!this.state.scrolledDown)?<i onClick={this.handleChevron} className="fas fa-chevron-up"></i>:<i></i>)}
