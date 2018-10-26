@@ -17,13 +17,13 @@
 .card-title{
   margin: 54px auto 24px auto;
   font-size: 2em;
-  font-family:'Trebuchet MS', sans-serif;
+  font-family: 'Krub', sans-serif;
 }
 .card-content{
   padding: 0px 60px;
   min-height: 50px;
   text-align: justify;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 32px;
 }
 @media screen and (min-width:1100px){
