@@ -79,7 +79,7 @@ class Home extends Component
             <img src={myself} alt='Aaron Goldsmith'></img>
           </div>
           <h2 className="text-center myname fadeSlow">
-            <span id="first">Aaron </span><span id="last">Goldsmith</span>
+            <span id="first">Aaron </span><br/><span id="last">Goldsmith</span>
           </h2>
           
           <Navtabs id="navigation" />

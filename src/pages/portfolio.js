@@ -41,7 +41,7 @@ class Portfolio extends React.Component{
             this.state.sections.map((category,i) => (
               <a href={"#"+category.cat}>
                 <li className="side-item" key={i}>
-                  {category.title}
+                  <em>{category.title}</em>
                 </li>
              </a>))
           }

@@ -91,10 +91,10 @@ import "./pages.css"
     <div id="page2">
       <nav aria-label='side navigation'>
         <ul className='side-nav' id='side'>
-        <span> <u>Explore</u> </span>
+        <span> &nbsp;<em>Introduction</em> </span>
           {this.state.cards.map((card,i) => (
             <a href={"#intro-"+(i+1)}>
-            <li className="side-item" key={i}>{card.title}</li>
+            <li className="side-item" key={i}><em>{card.title}</em></li>
             </a>))}
       </ul>
      </nav>
@@ -102,12 +102,8 @@ import "./pages.css"
       {this.state.cards.map((card,i) => (
         <section id={'intro-'+(i+1)}>
         <Card title={card.title} key={card.title} >
-            <CardContent>
-            {/* display card content */}
-              { card.content[card.index]} 
-
-               {/* conditionally render left/right icons */}
-                {(card.index<card.slides-1?
+        {/* conditionally render left/right icons */}
+              {(card.index<card.slides-1?
                 <i onClick={this.handleCardChange} id={i} className="fa fa-caret-right"></i>:
                 <span></span>)}
                 
@@ -115,11 +111,14 @@ import "./pages.css"
                 <i onClick={this.handleCardChange} id={i} className="fa fa-caret-left"></i>:
                 <span></span>)
             }
-
+            <CardContent>
+            {/* display card content */}
+              { card.content[card.index]} 
            </CardContent>
            <Pagination className="align-center" 
                        selected={card.index} 
                        size={this.linArr(card.slides)}/>
+          
          </Card>
       </section>
 
