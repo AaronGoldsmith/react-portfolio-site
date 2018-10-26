@@ -10,20 +10,18 @@ class Navtabs extends React.Component{
 
   handleClick = (item) => {
     this.setState({page:item.target.className.split(' ')[1]});
+
     setTimeout(function(){
-      let el = document.getElementById('navbar');
-
-      // window.scrollBy(0,el.pageYOffset)
+      let el = document.getElementById('page2');
       el.scrollIntoView();
-
-    });
+    },100);
   }
 
 
 
   render(){
     return (
-      <nav id='navbar'>
+      <nav id='navbar' className="navigation">
 
           <div onClick={this.handleClick} className="nav-tab intro">
             <Link to="/about">Introduction</Link></div>

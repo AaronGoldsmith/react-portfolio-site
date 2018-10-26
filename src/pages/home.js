@@ -9,16 +9,28 @@ class Home extends Component
   state = {
     scrolledDown:false,
     opened: false,
-    page:'about'
   }
+  checkSticky = () =>{
+    let nav = document.getElementById('side')
 
-  handleScroll = () => {
-    if(window.scrollY>=260){
-      this.setState({scrolledDown:false})
+    if(window.scrollY>window.innerHeight-85){
+      nav.classList.add('sticky');
     }
     else{
-      this.setState({scrolledDown:true})
+      nav.classList.remove('sticky')
     }
+  }
+  handleScroll = () => {
+    let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
+    this.checkSticky();
+    
+
+    if(scrollTop>=260)
+      this.setState({scrolledDown:false})
+    else
+      this.setState({scrolledDown:true})
+    
   }
   handleChevron = () => {
     if(window.scrollY>50){
@@ -41,7 +53,6 @@ class Home extends Component
     }
   }
   componentDidMount(){
-    window.scrollTo(0,25)
     this.setState({scrolledDown:true})
     window.addEventListener('scroll', this.handleScroll);
 
@@ -74,7 +85,7 @@ class Home extends Component
             <span id="first">Aaron </span><span id="last">Goldsmith</span>
           </h2>
           
-          <Navtabs />
+          <Navtabs id="navigation" />
         </header>
         {((!this.state.scrolledDown)?<i onClick={this.handleChevron} className="fas fa-chevron-up"></i>:<i></i>)}
 

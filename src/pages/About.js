@@ -19,13 +19,13 @@ import "./pages.css"
      let cardID = cardBtn.target.id
      let current = this.state.cards;
      let dir = cardBtn.target.className.split('-')[2];
+
+     // select left or right arrow
      if(dir === 'right'){
-      if(current[cardID].index >= (current[cardID].slides)){
-        current[cardID].index=0;
-       }
-       else{
+       if(current[cardID].index >= (current[cardID].slides))
+        current[cardID].index = 0;
+       else
         current[cardID].index++;
-       }
      }
      else if(current[cardID].index >=0 )
      {
@@ -37,7 +37,8 @@ import "./pages.css"
      this.setState({
       cards: [
         {
-          title: 'Getting to know Aaron',
+          id: 1,
+          title: 'Get to know Aaron',
           index: 0,
           slides: 3,
           content: [
@@ -47,7 +48,8 @@ import "./pages.css"
           ]
         },
         {
-          title:'Education',
+          id: 2,
+          title:'His Education',
           index: 0,
           slides: 4,
           content:[
@@ -58,6 +60,7 @@ import "./pages.css"
           ]
         },
         {
+          id: 3,
           title:'Trusted & Responsible',
           index: 0,
           slides: 4,
@@ -66,6 +69,15 @@ import "./pages.css"
             ' The Honor Council was created on behalf of the students so that administrators could have student insight on relevant issues coming to the upper school head of school.',
             ' Additionally, Aaron sat on the Judicial Board of his fraternity (Kappa Sigma) for three years while attending Santa Clara University. The Judicial board is an essential part of the fraternity because it enforces the rules that were created to keep us safe by administering disciplinary consequences to those who break the rules or guidelines.',
             ' Aaron has always enjoyed working children. He worked as an instructor at ID Tech Camps - Stanford for a number of years before joining a tutoring company, Breakout Mentors, where he could taught students similar computer science topics and languages'
+          ]
+        },
+        {
+          id: 4,
+          title:'Work Experiences',
+          index: 0,
+          slides: 1,
+          content:[
+            ' Aaron did work'
           ]
         }
       ]
@@ -76,8 +88,19 @@ import "./pages.css"
    }
   render(){
     return (
-    <section id="intro">
+    <div id="page2">
+      <nav aria-label='side navigation'>
+        <ul className='side-nav' id='side'>
+          {this.state.cards.map((card,i) => (
+            <a href={"#intro-"+(i+1)}>
+            <li className="side-item" key={i}>{card.title}</li>
+            </a>))}
+      </ul>
+     </nav>
+    
     {this.state.cards.map((card,i) => (
+      <section id={'intro-'+(i+1)}>
+
       <Card title={card.title} key={card.title} >
           <CardContent>
             { 
@@ -98,9 +121,10 @@ import "./pages.css"
         <Pagination className="align-center" selected={card.index} size={this.linArr(card.slides)}/>
 
       </Card>
+      </section>
 
     ))}
-    </section>
+    </div>
   );
   }
 
