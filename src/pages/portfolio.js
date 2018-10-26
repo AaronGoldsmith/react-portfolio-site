@@ -19,7 +19,7 @@ class Portfolio extends React.Component{
         {pname: "Project JJC", pdate: "", pgit: "", pweb: "", pcat: 1, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project GYI", pdate: "", pgit: "", pweb: "", pcat: 1, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project FOP", pdate: "", pgit: "", pweb: "", pcat: 2, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
-        {pname: "Project TRP", pdate: "", pgit: "", pweb: "", pcat: 2, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
+        {pname: "Project TRP", pdate: "", pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project OPP", pdate: "", pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project UQE", pdate: "", pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project MNO", pdate: "", pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},

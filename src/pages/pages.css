@@ -2,9 +2,24 @@
   width: 40%;
   margin: 0px 20px 30px 20px;
 }
+
+div.avatar{
+  height: 240px;
+  width: 240px;
+}
+div.avatar > img{
+  height: 100%;
+  width: 100%;
+  top:50%;
+  object-position: 50% 0%; 
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 2px 16px 4px #333333aa
+}
 .myname{
   width: 220px;
   font-size: 2.2em;
+  text-shadow: -1px 0px 1px #D9E0E0;
   font-family: 'Pontano Sans', sans-serif;
 }
 .flexy{
@@ -30,6 +45,7 @@
   display:initial;
   position:fixed;
   list-style-type:none;
+  
 }
 .side-nav.sticky{
   top: 15px;
@@ -45,8 +61,8 @@
   visibility: hidden;
   margin-left: 5px;
   padding-left: 10px;
-
   border-left: 4px solid transparent;
+  user-select: none;    
 }
 .bg{
   z-index: 20;
@@ -78,9 +94,8 @@
   .myname{
     margin-left: 0px;
   }
-
   .narrow{
-    margin: 0px 50px 0px 120px;
+    margin: 0px 50px 0px 160px;
     transition: all 750ms ease-out;
   }
  
@@ -94,16 +109,15 @@
     top: 35px;
     display:initial;
   }
-  .avatar > img{
-    max-height: 45%;
-    max-width: 45%;
-  }
-  .avatar{
-    margin: 0px 60px 30px 0px;
+  div.avatar{
+    height: 120px;
+    width: 120px;
+    margin: 0px 180px 150px 0px;
+
   }
   .narrow{
     margin: 0px 50px 0px 80px;
-    transition: all 1s ease-in;
+    transition: left 750ms ease-out;
   }
   .myname span{
     top: 0px;
@@ -112,32 +126,6 @@
     top: -290px;
     left: 100px;
   }
-}
-
-/* smallest window */
-@media screen and (max-width:400px){
-  .myname{
-   margin-left: 30px;
-   text-align: left !important;
-  }
-  .side-nav{
-    right: 15px;
-    background: #333333aa;
-    z-index:10;
-  }
-  .narrow{
-    margin: 0px 50px 0px 0px;
-    transition: all 0.5s ease-in-out;
-  }
-
-}
-
-i.fa-envelope,i.fa-envelope-open{
-  position: absolute;
-  font-size: 1.3em;
-  z-index: 2;
-  right: 65px;
-  top: 17px;
 }
 i.fa-caret-right,i.fa-caret-left{
   color: rgba(0, 0, 0, 0.26);
@@ -155,3 +143,65 @@ i.fa-caret-right:hover,i.fa-caret-left:hover{
   color:#000;
   cursor: pointer;
 }
+/* smallest window */
+@media screen and (max-width:400px){
+  .myname{
+    width: 200px;
+   margin-left: 30px;
+   text-align: left !important;
+  }
+  .avatar{
+    padding-bottom: 20px;
+  }
+  .side-nav{
+    background: #eeeeeecb;
+  }
+  .narrow{
+    margin: 0px;
+    transition: all 0.5s ease-out;
+  }
+  .side-nav.sticky{
+    top: 15px;
+    width: 100%;
+    /* right: -35px; */
+  }
+  .side-item{
+    color: #246EB9;
+
+  }
+  .side-item:hover{
+    color: #333;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  i.fa-caret-right,i.fa-caret-left{
+    position: absolute;
+    bottom: 0px;
+  }
+ 
+}
+
+
+
+.fadeSlow{
+  opacity:0;  
+  -webkit-animation:fadeIn ease-in 1; 
+  -webkit-animation-fill-mode:forwards; 
+  -webkit-animation-duration:2.5s;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:2.5s;
+}
+.fadeIn {
+  opacity:0;  
+  -webkit-animation:fadeIn ease-in 1; 
+  -webkit-animation-fill-mode:forwards; 
+  -webkit-animation-duration:1s;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

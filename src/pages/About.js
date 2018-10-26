@@ -91,39 +91,40 @@ import "./pages.css"
     <div id="page2">
       <nav aria-label='side navigation'>
         <ul className='side-nav' id='side'>
+        <span> <u>Explore</u> </span>
           {this.state.cards.map((card,i) => (
             <a href={"#intro-"+(i+1)}>
             <li className="side-item" key={i}>{card.title}</li>
             </a>))}
       </ul>
      </nav>
-    
-    {this.state.cards.map((card,i) => (
-      <section id={'intro-'+(i+1)}>
+    <div class = "narrow">
+      {this.state.cards.map((card,i) => (
+        <section id={'intro-'+(i+1)}>
+        <Card title={card.title} key={card.title} >
+            <CardContent>
+            {/* display card content */}
+              { card.content[card.index]} 
 
-      <Card title={card.title} key={card.title} >
-          <CardContent>
-            { 
-              card.content[card.index]// display card content
+               {/* conditionally render left/right icons */}
+                {(card.index<card.slides-1?
+                <i onClick={this.handleCardChange} id={i} className="fa fa-caret-right"></i>:
+                <span></span>)}
+                
+                {(card.index>0?
+                <i onClick={this.handleCardChange} id={i} className="fa fa-caret-left"></i>:
+                <span></span>)
             }
-              {(card.index<card.slides-1?
-              <i onClick={this.handleCardChange} id={i} className="fa fa-caret-right"></i>:
-              <span></span>)
-              }
-              {
-          // conditional render icon right
-              (card.index>0?
-              <i onClick={this.handleCardChange} id={i} className="fa fa-caret-left"></i>:
-              <span></span>)
-          }
 
-        </CardContent>
-        <Pagination className="align-center" selected={card.index} size={this.linArr(card.slides)}/>
-
-      </Card>
+           </CardContent>
+           <Pagination className="align-center" 
+                       selected={card.index} 
+                       size={this.linArr(card.slides)}/>
+         </Card>
       </section>
 
     ))}
+    </div>
     </div>
   );
   }

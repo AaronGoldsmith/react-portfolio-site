@@ -13,8 +13,10 @@ class Navtabs extends React.Component{
 
     setTimeout(function(){
       let el = document.getElementById('page2');
-      el.scrollIntoView();
-    },100);
+      if(el){
+        el.scrollIntoView();
+      }
+    },150);
   }
 
 

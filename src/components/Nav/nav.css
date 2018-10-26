@@ -3,18 +3,28 @@ nav{
   margin: 50px auto;
 }
  .nav-tab{
+    font-size: 1.2em;
+    text-shadow: -1px 0px 1px #D9E0E0;
+    font-family: 'Pontano Sans', sans-serif;
     padding: 15px 20px;
  }
  a {
-   text-decoration: none !important;
+   text-decoration: none;
  }
  .nav-tab a{
-  color: white !important;
- }
- .nav-tab:hover,a:hover{
+  color: #262730be !important;
+  user-select: none;   
+  border-bottom: 1px solid rgba(232, 111, 46, 0);  
+  -webkit-transition: border 500ms ease;
+  transition: border 500ms ease; 
+}
+.nav-tab a:hover {
+  border-bottom: 1px solid rgba(232, 111, 46, 1);  
+}
+ .nav-tab:hover{
    cursor: pointer;
    color: #2D342D !important;
-   text-decoration: none;
+ 
  }
  .circle {
   height: 8px;

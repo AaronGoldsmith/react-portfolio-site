@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import myself from "../agoldsmith.jpg"
 import Navtabs from "../components/Nav/Navtabs"
+import {IconLink} from "../components/FA/IconLink"
 import './pages.css';
 
 class Home extends Component
@@ -70,18 +71,14 @@ class Home extends Component
                   <i className={`fas fa-envelope${this.state.opened?'-open':''}`} />
               </a>
               <div className="online-links">
-                <a className="App-link" href="https://github.com/AaronGoldsmith" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i>
-                </a>
-                <a className="App-link" href="https://www.linkedin.com/in/aarongoldsmith-1/" alt='LinkedIn' target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-linkedin"></i>
-                </a>
+              <IconLink to="https://github.com/AaronGoldsmith" brand={'github'} type="brand" />
+              <IconLink to="https://www.linkedin.com/in/aarongoldsmith-1" brand={'linkedin'} type="brand" />
               </div>
           </div>
-          <div className="avatar">
+          <div className="avatar fadeIn">
             <img src={myself} alt='Aaron Goldsmith'></img>
           </div>
-          <h2 className="text-center myname">
+          <h2 className="text-center myname fadeSlow">
             <span id="first">Aaron </span><span id="last">Goldsmith</span>
           </h2>
           

@@ -3,10 +3,9 @@
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
-  max-width: 60%;
+  max-width: 100%;
   min-height: 150px;
   border-radius: 0.25rem;
-  margin: 10px auto;
   padding: 25px;
 }
 .card {
@@ -27,6 +26,9 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 32px;
 }
+@media screen and (min-width:1100px){
+  .card{margin: 10px 300px 10px 50px;}
+}
 @media screen and (max-width: 850px) {
   .card{
     padding: 0px;
@@ -36,9 +38,11 @@
   .card{
     max-width:95%;
     min-height: 50px;
+    margin: 0px;
+    padding: 10px;
   }
   .card-content{
     padding: 0px;
-    overflow:hidden;
+    overflow:visible;
   }
 }

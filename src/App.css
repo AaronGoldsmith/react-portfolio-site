@@ -1,4 +1,4 @@
-html {
+html{
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -10,67 +10,41 @@ section{
 }
 .App-header {
 
-  background-color: rgba(147, 183, 190, 0.758);
+  background-image: linear-gradient(to top, rgba(217, 224, 224, 0.87),rgba(43, 114, 229, 0.9));
   min-height: 80vh;
+  stop-opacity: 0.5;
   display: flex;
   padding-top: 60px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-  border-bottom: 7px solid #BF4E30;
+  color: #262730d8;
+  border-bottom: 7px solid #E86F2E;
 }
 .bg{
   background: url('https://www.toptal.com/designers/subtlepatterns/patterns/stripes-light.png') repeat;
   background-blend-mode: overlay;
 }
 
-div.avatar{
-  height: 240px;
-  width: 240px;
-}
-div.avatar > img{
-  height: 100%;
-  width: 100%;
-  top:50%;
-  object-position: 50% 0%; 
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid rgba(191, 79, 48, 0.377);
-  box-shadow: 0px 2px 16px 4px #333333aa
-}
-a,a:active,a:visited {
+a ,a:active,a:visited {
   color: #246EB9;
 }
 .App-link, link, Link{
   color: #246EB9;
   margin: 40px;
+  user-select: none;    
 }
 .App{
   margin: 0px auto;
 }
-.hero {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  color: #FFF;
-  text-align: center;
-}
 
 /* FONT AWESOME */
-.fab{
-   color: white;
-   font-size: 1.5em;
-  }
-.fab:hover{
-   color:rgb(214, 221, 219) !important;
-   text-shadow: 0px 0px 3px #2D342D;}
 
 .fa-chevron-up{
   font-size: 3.5em;
   opacity: 0.4;
+  color: #333;
   position:fixed;
   bottom: 40px;
   right: 40px;
@@ -82,7 +56,9 @@ a,a:active,a:visited {
 .fa-envelope,.navigation *{
   color: white;
 }
-
+h1,h2,h3,h4{
+  font-family: 'Pontano Sans', sans-serif;
+}
 
 .sy{
   margin-top: 150px;
