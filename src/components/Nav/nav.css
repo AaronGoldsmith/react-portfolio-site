@@ -7,11 +7,13 @@ nav{
  }
  a {
    text-decoration: none !important;
-   color: white;
+ }
+ .nav-tab a{
+  color: white !important;
  }
  .nav-tab:hover,a:hover{
    cursor: pointer;
-   color: #2D342D;
+   color: #2D342D !important;
    text-decoration: none;
  }
  .circle {
