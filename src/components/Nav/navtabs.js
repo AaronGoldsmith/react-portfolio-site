@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./nav.css"
-import { Link  } from "react-router-dom";
 
 class Navtabs extends React.Component{
 
@@ -13,9 +13,8 @@ class Navtabs extends React.Component{
 
     setTimeout(function(){
       let el = document.getElementById('page2');
-      if(el){
-        el.scrollIntoView();
-      }
+      if(el)  el.scrollIntoView();
+      
     },150);
   }
 

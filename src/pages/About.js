@@ -89,7 +89,7 @@ import "./pages.css"
   render(){
     return (
     <div id="page2">
-      <nav aria-label='side navigation'>
+      <nav aria-labelledby='side navigation'>
         <ul className='side-nav' id='side'>
         <span> &nbsp;<em>Introduction</em> </span>
           {this.state.cards.map((card,i) => (

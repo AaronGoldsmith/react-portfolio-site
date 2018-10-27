@@ -1,6 +1,5 @@
 import React from "react"
 import Project from "../components/PortfoGrid/Project"
-import {Link} from "react-router-dom";
 class Portfolio extends React.Component{
   state = {
     sections: []
@@ -18,8 +17,9 @@ class Portfolio extends React.Component{
         {pname: "LIRI App", keywords:['Spotify','API','Node.js'], pgit: "liri-node-app", pweb: "", pcat: 1, imgSrc: `/assets/images/node-sample.png`},
         {pname: "Clicker Game",keywords:['React'], pgit: "charlie-game", pweb: "https://aarongoldsmith.github.io/charlie-game/", pcat: 1, imgSrc: `/assets/images/charlie-sample.png`},
         {pname: "Onion Scraper",keywords:['News Scraper','The Onion News'], pgit: "news-scraper", pweb: "https://whispering-dusk-64800.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/news-sample.png`},
-        {pname: "Project FOP",keywords:[], pgit: "", pweb: "", pcat: 2, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
-        {pname: "Project TRP",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
+        {pname: "Pathway",keywords:[], pgit: "", pweb: "", pcat: 2, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
+        {pname: "Ethical CyberSec",keywords:['cyber-security'], pgit: "", pweb: "/assets/papers/GenerativeArt.pdf", pcat: 2, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
+        {pname: "Math, Philosophy, & CS",keywords:['Philosophy', 'Computer Science'], pgit: "", pweb: "", pcat: 2, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project OPP",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project UQE",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project MNO",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
@@ -37,6 +37,7 @@ class Portfolio extends React.Component{
   render (){
     return (
     <div className="portfolio-page" id="page2" >
+      <nav aria-labelledby='side navigation'>
         <ul className='side-nav' id='side'>
         <span> &nbsp;Portfolio</span>
           {
@@ -49,6 +50,7 @@ class Portfolio extends React.Component{
              </a>))
           }
         </ul>
+        </nav>
         {
         this.state.sections.map((category,i) => (
           <section className="narrow" id={category.cat}>
