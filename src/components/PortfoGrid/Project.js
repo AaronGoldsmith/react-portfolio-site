@@ -5,6 +5,7 @@ const Project = ({project}) => (
     
     <div className="project">
         <h3>{project.pname}</h3>
+        <em>{project.keywords.join(', ')}</em>
         <div className="media">
             <img class='project-img' src={project.imgSrc?project.imgSrc:''} alt={project.pname} />
         </div>
