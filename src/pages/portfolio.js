@@ -14,15 +14,15 @@ class Portfolio extends React.Component{
         {pname: "VG Nexus", keywords:['Game Development','Community'], pgit: "https://github.com/JackRa88it/VG-Nexus", pweb: "https://vgnexus.com", pcat: 1, imgSrc: `/assets/images/vg-sample.png`,type:"webApp"},
         {pname: "Train Scheduler",keywords:['Firebase'], pgit: "Train-Time", pweb: "https://aarongoldsmith.github.io/Train-Time/", pcat: 1, imgSrc: "/assets/images/train-sample.png",type:"webApp"},
         {pname: "Bamazon",keywords:['CLI','Node.js'], pgit: "Bamazon", pweb: "https://aarongoldsmith.github.io/Bamazon/", pcat: 1, imgSrc: `/assets/images/Bamazon.png`,type:"shell"},
-        {pname: "LIRI App", keywords:['Spotify','API','Node.js'], pgit: "liri-node-app", pweb: "", pcat: 1, imgSrc: undefined,type:"shell"},
+        {pname: "LIRI App", keywords:['Spotify','API','Node.js'], pgit: "liri-node-app", pweb: "https://aarongoldsmith.github.io/liri-node-app/", pcat: 1, imgSrc: undefined,type:"shell"},
         {pname: "Clicker Game",keywords:['React'], pgit: "charlie-game", pweb: "https://aarongoldsmith.github.io/charlie-game/", pcat: 1, imgSrc: `/assets/images/charlie-sample.png`,type:"webApp"},
         {pname: "Onion Scraper",keywords:['News Scraper','The Onion News'], pgit: "news-scraper", pweb: "https://whispering-dusk-64800.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/news-sample.png`,type:"webApp"},
         {pname: "Pathway",keywords:[], pgit: "", pweb: "/assets/papers/pathway.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
         {pname: "Ethical CyberSec",keywords:['cyber-security'], pgit: "", pweb: "", pcat: 2, imgSrc: undefined,type:"doc"},
         {pname: "Math, Philosophy, & CS",keywords:['Philosophy', 'Computer Science'], pgit: "", pweb: "/assets/papers/philosophyCS.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
         {pname: "Generative Art",keywords:['Generative','Art'], pgit: "", pweb: "/assets/papers/GenerativeArt.pdf", pcat: 2, imgSrc: undefined, type:"doc"},
-        {pname: "Project UQE",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: undefined},
-        {pname: "Project MNO",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: undefined},
+        {pname: "Project UQE",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: undefined,type:"webApp"},
+        {pname: "Python Networking",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: undefined, type: 'shell'}
 
       ],
       sections: [

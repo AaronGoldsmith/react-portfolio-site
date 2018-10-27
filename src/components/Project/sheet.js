@@ -9,7 +9,7 @@ const SVG = ({
   width = '100%',
   className = '',
   height = '100%',
-  viewBox = '0 0 64 64'
+  viewBox = '10 0 64 64'
 }) =>
   <svg viewBox={viewBox} width={width} height={height} style={style} className={className} xmlns="http://www.w3.org/2000/svg">
   <g transform="matrix(1.0124 0 0 1.0124 -.37266 -.37266)" >
