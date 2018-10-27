@@ -1,8 +1,8 @@
 import React from "react"
 import {IconLink} from "../FA/IconLink"
-import Sheet from "./sheet"
-import Shell from "./shell"
-import Code from "./code"
+import Sheet from "./icons/sheet"
+import Shell from "./icons/shell"
+import Code from "./icons/code"
 import "./Project.css"
 
 const Project = ({project}) => (

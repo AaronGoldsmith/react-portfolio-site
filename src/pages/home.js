@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import myself from "../agoldsmith.jpg"
-import Navtabs from "../components/Nav/Navtabs"
+import Navtabs from "../components/Nav/navtabs"
 import {IconLink} from "../components/FA/IconLink"
 import './pages.css';
 
