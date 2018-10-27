@@ -70,7 +70,7 @@ class Home extends Component
               <a id='contact-email'  onMouseUp={this.handleEnvelope} rel="noopener no referrer"  target='_blank' href="mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A">
                   <i className={`fas fa-envelope${this.state.opened?'-open':''}`} />
               </a>
-              <div className="online-links">
+              <div className="online-links light">
               <IconLink to="https://github.com/AaronGoldsmith" brand={'github'} type="brand" />
               <IconLink to="https://www.linkedin.com/in/aarongoldsmith-1" brand={'linkedin'} type="brand" />
               </div>

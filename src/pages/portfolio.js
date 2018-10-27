@@ -10,14 +10,14 @@ class Portfolio extends React.Component{
     this.setState({
       // if using mongoDB, this will be where API gets called for data
       projects: [ 
-        {pname: "Hangman Game",keywords:[], pgit: "", pweb: "", pcat: 1, imgSrc: "/assets/images/hangman-sample.png"},
-        {pname: "Train Scheduler",keywords:['Firebase'], pgit: "", pweb: "", pcat: 1, imgSrc: "/assets/images/train-sample.png"},
-        {pname: "VG Nexus", keywords:['Game Development','Community'], pgit: "", pweb: "", pcat: 1, imgSrc: `/assets/images/vg-sample.png`},
-        {pname: "Stock Wars", keywords:['Simulation','Stock Market'], pgit: "", pweb: "", pcat: 1, imgSrc: `/assets/images/stock-sample.png`},
-        {pname: "'Bamazon' CLI - Node.js",keywords:[], pgit: "", pweb: "", pcat: 1, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
-        {pname: "'LIRI' CLI - Spotify API", keywords:['Spotify','API','Node.js'], pgit: "", pweb: "", pcat: 1, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
-        {pname: "Project JJC",keywords:[], pgit: "", pweb: "", pcat: 1, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
-        {pname: "Project GYI",keywords:[], pgit: "", pweb: "", pcat: 1, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
+        {pname: "Hangman Game",keywords:[], pgit: "hangman", pweb: "https://aarongoldsmith.github.io/hangman/", pcat: 1, imgSrc: "/assets/images/hangman-sample.png"},
+        {pname: "Stock Wars", keywords:['Simulation','Stock Market'], pgit: "stock-wars", pweb: "https://aqueous-brook-18608.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/stock-sample.png`},
+        {pname: "VG Nexus", keywords:['Game Development','Community'], pgit: "https://github.com/JackRa88it/VG-Nexus", pweb: "https://vgnexus.com", pcat: 1, imgSrc: `/assets/images/vg-sample.png`},
+        {pname: "Train Scheduler",keywords:['Firebase'], pgit: "Train-Time", pweb: "https://aarongoldsmith.github.io/Train-Time/", pcat: 1, imgSrc: "/assets/images/train-sample.png"},
+        {pname: "Bamazon",keywords:['CLI','Node.js'], pgit: "Bamazon", pweb: "https://aarongoldsmith.github.io/Bamazon/", pcat: 1, imgSrc: `/assets/images/Bamazon.png`},
+        {pname: "LIRI App", keywords:['Spotify','API','Node.js'], pgit: "liri-node-app", pweb: "", pcat: 1, imgSrc: `/assets/images/node-sample.png`},
+        {pname: "Clicker Game",keywords:['React'], pgit: "charlie-game", pweb: "https://aarongoldsmith.github.io/charlie-game/", pcat: 1, imgSrc: `/assets/images/charlie-sample.png`},
+        {pname: "Onion Scraper",keywords:['News Scraper','The Onion News'], pgit: "news-scraper", pweb: "https://whispering-dusk-64800.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/news-sample.png`},
         {pname: "Project FOP",keywords:[], pgit: "", pweb: "", pcat: 2, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project TRP",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
         {pname: "Project OPP",keywords:[], pgit: "", pweb: "", pcat: 3, imgSrc: `https://loremflickr.com/250/250?random=${Math.floor(Math.random()*200)}`},
@@ -53,6 +53,8 @@ class Portfolio extends React.Component{
         this.state.sections.map((category,i) => (
           <section className="narrow" id={category.cat}>
             <h1 className="cat-title">{category.title}</h1>
+            <h3 className="cat-title">{category.description}</h3>
+
             <div className="flexy">
               {this.state.projects.map((proj,i) => (
                 proj.pcat===category.cat?
