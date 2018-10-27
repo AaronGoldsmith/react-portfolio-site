@@ -14,7 +14,7 @@ class Home extends Component
   checkSticky = () =>{
     let nav = document.getElementById('side')
 
-    if(window.scrollY>window.innerHeight-85){
+    if(window.scrollY>window.innerHeight-80){
       nav.classList.add('sticky');
     }
     else{
@@ -67,7 +67,7 @@ class Home extends Component
       <div className="bg" id="app">
         <header className="App-header">
         <div className="social-wrap">
-              <a id='contact-email'  onMouseUp={this.handleEnvelope} rel="noopener no referrer"  target='_blank' href="mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A">
+              <a id='contact-email' title='agoldsmith@alumni.scu.edu' onMouseUp={this.handleEnvelope} rel="noopener no referrer"  target='_blank' href="mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A">
                   <i className={`fas fa-envelope${this.state.opened?'-open':''}`} />
               </a>
               <div className="online-links light">
