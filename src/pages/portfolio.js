@@ -13,8 +13,8 @@ class Portfolio extends React.Component{
         {pname: "Stock Wars", keywords:['Simulation','Stock Market'], pgit: "stock-wars", pweb: "https://aqueous-brook-18608.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/stock-sample.png`,type:"webApp"},
         {pname: "VG Nexus", keywords:['Game Development','Community'], pgit: "https://github.com/JackRa88it/VG-Nexus", pweb: "https://vgnexus.com", pcat: 1, imgSrc: `/assets/images/vg-sample.png`,type:"webApp"},
         {pname: "Train Scheduler",keywords:['Firebase'], pgit: "Train-Time", pweb: "https://aarongoldsmith.github.io/Train-Time/", pcat: 1, imgSrc: "/assets/images/train-sample.png",type:"webApp"},
-        {pname: "(CLI) Bamazon App",keywords:['CLI','Node.js'], pgit: "Bamazon", pweb: "https://aarongoldsmith.github.io/Bamazon/", pcat: 1, imgSrc: undefined,type:"shell"},
-        {pname: "(CLI) LIRI App", keywords:['Spotify','API','Node.js'], pgit: "liri-node-app", pweb: "https://aarongoldsmith.github.io/liri-node-app/", pcat: 1, imgSrc: undefined,type:"shell"},
+        {pname: "Bamazon - CLI",keywords:['CLI','Node.js'], pgit: "Bamazon", pweb: "https://aarongoldsmith.github.io/Bamazon/", pcat: 1, imgSrc: undefined,type:"shell"},
+        {pname: "LIRI App - CLI", keywords:['Spotify','API','Node.js'], pgit: "liri-node-app", pweb: "https://aarongoldsmith.github.io/liri-node-app/", pcat: 1, imgSrc: undefined,type:"shell"},
         {pname: "Clicker Game",keywords:['React'], pgit: "charlie-game", pweb: "https://aarongoldsmith.github.io/charlie-game/", pcat: 1, imgSrc: `/assets/images/charlie-sample.png`,type:"webApp"},
         {pname: "Onion Scraper",keywords:['News Scraper','The Onion News'], pgit: "news-scraper", pweb: "https://whispering-dusk-64800.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/news-sample.png`,type:"webApp"},
         {pname: "Pathway",keywords:[], pgit: "", pweb: "/assets/papers/pathway.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
@@ -25,13 +25,23 @@ class Portfolio extends React.Component{
         {pname: "Python Networking", keywords:['talk.py','listen.py','diffiehellman'], pgit: "networking-labs", pweb: "", pcat: 3, imgSrc: undefined, type: 'shell'},
         {pname: "Multiplexer Lab", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer1.pdf", pcat: 3, imgSrc: undefined, type: 'doc'},
         {pname: "Multiplexer pt2", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer2.pdf", pcat: 3, imgSrc: undefined, type: 'doc'},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_01.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_02.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_04.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_07.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_08.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_09.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_03.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_05.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_06.jpg`,type:"photo"},
+
+
       ],
       sections: [
         {title:"Web Dev", description: "These items were projects or assignments I submitted while attending the UC Berkeley Boot camp", cat: 1},
         {title:"University Papers", description: "These are various papers I wrote at Santa Clara University over the course of 4 years", cat: 2},
-        {title:"CS Projects", description:"These are a variety of CS assignments and projects I have worked on", cat: 3},
-        {title:"Photography", description: "Photography", cat: 4}
- 
+        {title:"Computer Science Projects", description:"These are a variety of assignments, labs, and projects that I've worked on", cat: 3},
+        {title:"Photography", description: "", cat: 4}
       ]
     })
   }

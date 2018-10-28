@@ -9,25 +9,29 @@ const Project = ({project}) => (
     
     <div className="project">
         <div className="flexy"> 
-        <h3 id="named">{project.pname}</h3>
-        <span className="mt">
+        <h3 id="named">  {project.pname} </h3>
+        {/* Check to see if we have a github link */}
         {
-            // first checking to see if any link provided at all
             project.pgit.length>1?
                 <IconLink to={ 
-            //  check for 'https' --> orig repo
-            //  if string not found, link to my github
+                //  check for 'https' --> orig repo
+                //  if string not found, link to my github
                project.pgit.substring(0,5)!=='https'?
                "https://github.com/AaronGoldsmith/"+ project.pgit:
                project.pgit} brand={'github'} type="brand" />
 
             :<span></span>
         }
-        </span>
-         
+     {/* Check to see if we have an external link */}
+        {
+            project.pweb.length>0?
+                <IconLink to={project.pweb} type="externa-link-alt" />:
+             <span></span>
+        }
+
          </div>
         <a href={project.pweb} >
-            <div className="media">
+            <div className={project.type==="photo"?'img':"media"}>
                 {project.imgSrc?
                     <img className='project-img' title={project.pname} src={project.imgSrc} alt={project.pname} />:
                         project.type==='doc'?   <Sheet />:
