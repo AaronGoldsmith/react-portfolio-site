@@ -1,8 +1,8 @@
 import React from "react"
 const SVG =({
-  width = "100%",
-  height = "100%",
-  viewBox = "250 0 200.00001 700.00001"
+  width = "150%",
+  height = "150%",
+  viewBox = "250 -80 210.00001 700.00001"
 }) => (
 <svg width={width} height={height} version="1.1" viewBox={viewBox} xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0 -552.36)" fill="none" stroke="#555" strokeLinecap="round" strokeLinejoin="round" strokeWidth="38.966">

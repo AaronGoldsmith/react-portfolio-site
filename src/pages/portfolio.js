@@ -17,12 +17,15 @@ class Portfolio extends React.Component{
         {pname: "LIRI App - CLI", keywords:['Spotify','API','Node.js'], pgit: "liri-node-app", pweb: "https://aarongoldsmith.github.io/liri-node-app/", pcat: 1, imgSrc: undefined,type:"shell"},
         {pname: "Clicker Game",keywords:['React'], pgit: "charlie-game", pweb: "https://aarongoldsmith.github.io/charlie-game/", pcat: 1, imgSrc: `/assets/images/charlie-sample.png`,type:"webApp"},
         {pname: "Onion Scraper",keywords:['News Scraper','The Onion News'], pgit: "news-scraper", pweb: "https://whispering-dusk-64800.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/news-sample.png`,type:"webApp"},
+        {pname: "GifTastic",keywords:['giphy','API'], pgit: "GIFTastic", pweb: "https://aarongoldsmith.github.io/GIFTastic/", pcat: 1, imgSrc: undefined,type:"webApp"},
+        {pname: "Quiz Game",keywords:['Quiz','setTimeout'], pgit: "TriviaGame", pweb: "https://aarongoldsmith.github.io/TriviaGame/", pcat: 1, imgSrc: undefined,type:"webApp"},
         {pname: "Pathway",keywords:[], pgit: "", pweb: "/assets/papers/pathway.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
-        {pname: "Ethical CyberSec",keywords:['cyber-security'], pgit: "", pweb: "", pcat: 2, imgSrc: undefined,type:"doc"},
-        {pname: "Math, Philosophy, & CS",keywords:['Philosophy', 'Computer Science'], pgit: "", pweb: "/assets/papers/philosophyCS.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
-        {pname: "Generative Art",keywords:['Generative','Art'], pgit: "", pweb: "/assets/papers/GenerativeArt.pdf", pcat: 2, imgSrc: undefined, type:"doc"},
-        {pname: "Generative Art",keywords:['Generative','Art'], pgit: "GenerativeGold", pweb: "https://aarongoldsmith.github.io/GenerativeGold/", pcat: 3, imgSrc: undefined,type:"webApp"},
-        {pname: "Python Networking", keywords:['talk.py','listen.py','diffiehellman'], pgit: "networking-labs", pweb: "", pcat: 3, imgSrc: undefined, type: 'shell'},
+        {pname: "Philosophy of CS",keywords:['Philosophy', 'Computer Science'], pgit: "", pweb: "/assets/papers/philosophyCS.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
+        {pname: "Generative Art", keywords:['Generative','Art'], pgit: "", pweb: "/assets/papers/GenerativeArt.pdf", pcat: 2, imgSrc: undefined, type:"doc"},
+        {pname: "Generative Art", keywords:['Generative','Art'], pgit: "GenerativeGold", pweb: "https://aarongoldsmith.github.io/GenerativeGold/", pcat: 3, imgSrc: undefined,type:"webApp"},
+        {pname: "Python Networking", keywords:['talk.py','listen.py','diffiehellman'], pgit: "networking-labs", pweb: "https://github.com/AaronGoldsmith/networking-labs/tree/master/Lab%204", pcat: 3, imgSrc: undefined, type: 'shell'},
+        {pname: "Char Stream Analysis", keywords:['generate','python','data'], pgit: "", pweb:"/assets/papers/CharStreamAnalysis.pdf", pcat: 3, imgSrc: undefined, type: 'webApp'},
+        {pname: "Bandwith Analysis", keywords:['lab','analysis','bandwith'], pgit: "", pweb: "/assets/papers/NetworkAnalysis.pdf", pcat: 3, imgSrc: undefined, type: 'webApp'},
         {pname: "Multiplexer Lab", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer1.pdf", pcat: 3, imgSrc: undefined, type: 'doc'},
         {pname: "Multiplexer pt2", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer2.pdf", pcat: 3, imgSrc: undefined, type: 'doc'},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_01.jpg`,type:"photo"},
@@ -41,7 +44,7 @@ class Portfolio extends React.Component{
         {title:"Web Dev", description: "These items were projects or assignments I submitted while attending the UC Berkeley Boot camp", cat: 1},
         {title:"University Papers", description: "These are various papers I wrote at Santa Clara University over the course of 4 years", cat: 2},
         {title:"Computer Science Projects", description:"These are a variety of assignments, labs, and projects that I've worked on", cat: 3},
-        {title:"Photography", description: "", cat: 4}
+        {title:"Photography", description: "All photographs were taken by Aaron Goldsmith ", cat: 4}
       ]
     })
   }
