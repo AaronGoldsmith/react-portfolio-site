@@ -67,12 +67,13 @@ class Home extends Component
       <div className="bg" id="app">
         <header className="App-header">
         <div className="social-wrap">
+              
+              <div className="online-links flexy light">
               <a id='contact-email' title='agoldsmith@alumni.scu.edu' onMouseUp={this.handleEnvelope} rel="noopener no referrer"  target='_blank' href="mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A">
                   <i className={`fas fa-envelope${this.state.opened?'-open':''}`} />
               </a>
-              <div className="online-links light">
-              <IconLink to="https://github.com/AaronGoldsmith" brand={'github'} type="brand" />
-              <IconLink to="https://www.linkedin.com/in/aarongoldsmith-1" brand={'linkedin'} type="brand" />
+              <IconLink to="https://github.com/AaronGoldsmith" brand='github' type="brand" />
+              <IconLink to="https://www.linkedin.com/in/aarongoldsmith-1" className="normal" brand='linkedin' type="brand" />
               </div>
           </div>
           <div className="avatar fadeIn">
