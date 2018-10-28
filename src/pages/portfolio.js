@@ -2,14 +2,26 @@ import React from "react"
 import Project from "../components/Project/Project"
 class Portfolio extends React.Component{
   state = {
-    sections: []
+    sections: [],
+    selected: undefined
   }
+  handleClick = (btn) => {
+    const classL = btn.target.classList[1];
+    let active = document.getElementsByClassName('activated')[0]
 
+    if(classL){
+      btn.target.classList.remove('activated');
+    }
+    else{
+      if(active){active.classList.remove('activated')}
+      btn.target.classList.add('activated');
+    }
+  }
   componentDidMount(){
     this.setState({
       // if using mongoDB, this will be where API gets called for data
       projects: [ 
-        {pname: "Hangman Game",keywords:[], pgit: "hangman", pweb: "https://aarongoldsmith.github.io/hangman/", pcat: 1, imgSrc: "/assets/images/hangman-sample.png", type:"webApp", },
+        {pname: "Hangman Game",keywords:[], pgit: "hangman", pweb: "https://aarongoldsmith.github.io/hangman/", pcat: 1, imgSrc: "/assets/images/hangman-sample.png", type:"webApp" },
         {pname: "Stock Wars", keywords:['Simulation','Stock Market'], pgit: "stock-wars", pweb: "https://aqueous-brook-18608.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/stock-sample.png`,type:"webApp"},
         {pname: "VG Nexus", keywords:['Game Development','Community'], pgit: "https://github.com/JackRa88it/VG-Nexus", pweb: "https://vgnexus.com", pcat: 1, imgSrc: `/assets/images/vg-sample.png`,type:"webApp"},
         {pname: "Train Scheduler",keywords:['Firebase'], pgit: "Train-Time", pweb: "https://aarongoldsmith.github.io/Train-Time/", pcat: 1, imgSrc: "/assets/images/train-sample.png",type:"webApp"},
@@ -17,14 +29,14 @@ class Portfolio extends React.Component{
         {pname: "LIRI App - CLI", keywords:['Spotify','API','Node.js'], pgit: "liri-node-app", pweb: "https://aarongoldsmith.github.io/liri-node-app/", pcat: 1, imgSrc: undefined,type:"shell"},
         {pname: "Clicker Game",keywords:['React'], pgit: "charlie-game", pweb: "https://aarongoldsmith.github.io/charlie-game/", pcat: 1, imgSrc: `/assets/images/charlie-sample.png`,type:"webApp"},
         {pname: "Onion Scraper",keywords:['News Scraper','The Onion News'], pgit: "news-scraper", pweb: "https://whispering-dusk-64800.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/news-sample.png`,type:"webApp"},
-        {pname: "GifTastic",keywords:['giphy','API'], pgit: "GIFTastic", pweb: "https://aarongoldsmith.github.io/GIFTastic/", pcat: 1, imgSrc: undefined,type:"webApp"},
+        {pname: "Gif-Tastic",keywords:['giphy','API'], pgit: "GIFTastic", pweb: "https://aarongoldsmith.github.io/GIFTastic/", pcat: 1, imgSrc: undefined,type:"webApp"},
         {pname: "Quiz Game",keywords:['Quiz','setTimeout'], pgit: "TriviaGame", pweb: "https://aarongoldsmith.github.io/TriviaGame/", pcat: 1, imgSrc: undefined,type:"webApp"},
-        {pname: "Pathway",keywords:[], pgit: "", pweb: "/assets/papers/pathway.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
+        {pname: "University Pathway",keywords:[], pgit: "", pweb: "/assets/papers/pathway.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
         {pname: "Philosophy of CS",keywords:['Philosophy', 'Computer Science'], pgit: "", pweb: "/assets/papers/philosophyCS.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
         {pname: "Generative Art", keywords:['Generative','Art'], pgit: "", pweb: "/assets/papers/GenerativeArt.pdf", pcat: 2, imgSrc: undefined, type:"doc"},
         {pname: "Generative Art", keywords:['Generative','Art'], pgit: "GenerativeGold", pweb: "https://aarongoldsmith.github.io/GenerativeGold/", pcat: 3, imgSrc: undefined,type:"webApp"},
         {pname: "Python Networking", keywords:['talk.py','listen.py','diffiehellman'], pgit: "networking-labs", pweb: "https://github.com/AaronGoldsmith/networking-labs/tree/master/Lab%204", pcat: 3, imgSrc: undefined, type: 'shell'},
-        {pname: "Char Stream Analysis", keywords:['generate','python','data'], pgit: "", pweb:"/assets/papers/CharStreamAnalysis.pdf", pcat: 3, imgSrc: undefined, type: 'webApp'},
+        {pname: "CharStream Analysis", keywords:['generate','python','data'], pgit: "", pweb:"/assets/papers/CharStreamAnalysis.pdf", pcat: 3, imgSrc: undefined, type: 'webApp'},
         {pname: "Bandwith Analysis", keywords:['lab','analysis','bandwith'], pgit: "", pweb: "/assets/papers/NetworkAnalysis.pdf", pcat: 3, imgSrc: undefined, type: 'webApp'},
         {pname: "Multiplexer Lab", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer1.pdf", pcat: 3, imgSrc: undefined, type: 'doc'},
         {pname: "Multiplexer pt2", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer2.pdf", pcat: 3, imgSrc: undefined, type: 'doc'},
@@ -74,7 +86,7 @@ class Portfolio extends React.Component{
             <div className="flexy">
               {this.state.projects.map((proj,i) => (
                 proj.pcat === category.cat?
-                <Project project={proj} key={i} />:<span></span>
+                <Project project={proj} clickHandler={this.handleClick} key={i} />:''
               ))}
             </div>
           </section>

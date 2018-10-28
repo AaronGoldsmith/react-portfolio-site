@@ -6,10 +6,10 @@ const SVG = ({
     strokeWidth: "2.4693",
     color:"#000000",
   },
-  width = '80%',
+  width = '100%',
   className = '',
-  height = '80%',
-  viewBox = '10 0 64 64'
+  height = '100%',
+  viewBox = '10 0 44 64'
 }) =>
   <svg viewBox={viewBox} width={width} height={height} style={style} className={className} xmlns="http://www.w3.org/2000/svg">
   <g transform="matrix(1.0124 0 0 1.0124 -.37266 -.37266)" >

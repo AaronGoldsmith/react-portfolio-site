@@ -98,7 +98,7 @@ import "./pages.css"
             </a>))}
       </ul>
      </nav>
-    <div class = "narrow">
+    <div className = "narrow">
       {this.state.cards.map((card,i) => (
         <section id={'intro-'+(i+1)}>
         <Card title={card.title} key={card.title} >
