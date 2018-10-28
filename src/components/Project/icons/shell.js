@@ -1,7 +1,7 @@
 
 import React from "react";
 const SVG = ({
-  viewBox = '120 200 400 500',
+  viewBox = '90 200 390 500',
   width = "300%",
   height = "300%"
 }) =>

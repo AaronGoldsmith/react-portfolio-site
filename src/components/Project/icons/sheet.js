@@ -6,9 +6,9 @@ const SVG = ({
     strokeWidth: "2.4693",
     color:"#000000",
   },
-  width = '100%',
+  width = '50%',
   className = '',
-  height = '100%',
+  height = '50%',
   viewBox = '10 0 64 64'
 }) =>
   <svg viewBox={viewBox} width={width} height={height} style={style} className={className} xmlns="http://www.w3.org/2000/svg">
