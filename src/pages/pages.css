@@ -90,6 +90,10 @@ div.avatar > img{
   top: 0px;
   right: 40px;
 }
+.social-wrap .fas,
+.social-wrap .fab{
+  padding-left:25px;
+}
 .portfolio-page{
   margin: 50px 0px;
   height:100%;
