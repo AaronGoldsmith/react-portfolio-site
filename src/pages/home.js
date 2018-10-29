@@ -29,7 +29,7 @@ class Home extends Component
 
     this.checkSticky();
 
-    if(this.state.scrollTop>=260)
+    if(scrollTop>=260)
       this.setState({scrolledDown:false})
     else
       this.setState({scrolledDown:true})

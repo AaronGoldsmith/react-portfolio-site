@@ -3,11 +3,16 @@ import {Card,CardContent} from "../components/PortfoCard/"
 import Pagination from "../components/Nav/Pagination"
 import "./pages.css"
 
+const regex = /[\[](.+)[\]][\(](.+)[\)]/;
  class About extends React.Component {
    state = {
       cards: [],
    }
-
+   findandTransform(str){
+     var str1 = str.split('[')[1]
+     var regex = /(.+)[\]][\(](.+)[\)]/
+     return str1.replace(regex, '$1|$2').split('|')
+   }
    linArr = (n) => {
       let arr = [];
       for(var i = 0;i<n;i++){
@@ -43,7 +48,7 @@ import "./pages.css"
           slides: 3,
           content: [
             ' Aaron is a creative and hard-working individual with a life-long love and fascination for technology',
-            ' Prior to moving down to Santa Clara to attend University, Aaron lived in Oakland for the first eighteen years of his life',
+            ' Prior to moving down to Santa Clara to attend College, Aaron lived in Oakland for the first eighteen years of his life',
             ' He had the privilege of attending smaller academic schools in Oakland, which he believes helped foster his mentality of creating “positive change” in the world'
           ]
         },
@@ -75,10 +80,12 @@ import "./pages.css"
           id: 4,
           title:'Work Experiences',
           index: 0,
-          slides: 1,
+          slides: 3,
           content:[
-            ' Aaron did work'
-          ]
+              'In 2014, The Head-Royce School administration asked several students to build a resource database for the school to use.',
+              'A group of students, including Aaron, built the first version of the website in Drupal, and it has since gone through various iterations as current students continue to modify and upkeep the site:\n\n[https://hrsinstitute.github.io/theOH/theoh.html](HRS) ',
+              'Since the database project, Aaron has designed and built websites for several small buisnesses: smokeitbbq.com, ncsautism,org, [https://arttileoakland.com](Art Tile Oakland)'
+            ]
         }
       ]
 
@@ -112,8 +119,18 @@ import "./pages.css"
                 <span></span>)
             }
             <CardContent>
-            {/* display card content */}
-              { card.content[card.index]} 
+            {/* display card content  check for [url](title) */}
+            {
+              card.content[card.index].match(regex)?(
+                  <div>
+                    {card.content[card.index].split(regex)[0]}
+                     <a href ={this.findandTransform(card.content[card.index])[0]}>
+                      { this.findandTransform(card.content[card.index])[1]}
+                    </a>
+                  </div>):
+                  //  couldn't match regex, so show text
+                  card.content[card.index]
+                }
            </CardContent>
            <Pagination className="align-center" 
                        selected={card.index} 
