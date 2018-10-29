@@ -124,7 +124,7 @@ const regex = /[\[](.+)[\]][\(](.+)[\)]/;
               card.content[card.index].match(regex)?(
                   <div>
                     {card.content[card.index].split(regex)[0]}
-                     <a href ={this.findandTransform(card.content[card.index])[0]}>
+                     <a rel="noopener noreferrer" href ={this.findandTransform(card.content[card.index])[0]}>
                       { this.findandTransform(card.content[card.index])[1]}
                     </a>
                   </div>):

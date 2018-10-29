@@ -81,6 +81,7 @@ class Home extends Component
           <div className="social-wrap">
                 
                 <div className="online-links light">
+                {/* eslint-disable-next-line */}
                 <a id='contact-email' title='agoldsmith@alumni.scu.edu' onMouseUp={this.handleEnvelope} rel="noopener no referrer"  target='_blank' href="mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A">
                     <i className={`fas fa-envelope${this.state.opened?'-open':''}`} />
                 </a>
