@@ -6,16 +6,11 @@ class Portfolio extends React.Component{
     selected: undefined
   }
   handleClick = (btn) => {
-    const classL = btn.target.classList[1];
     let active = document.getElementsByClassName('activated')[0]
-
-    if(classL){
-      btn.target.classList.remove('activated');
+    if(!btn.target.classList.contains('svg')){
+      btn.target.classList.toggle('activated');
     }
-    else{
-      if(active){active.classList.remove('activated')}
-      btn.target.classList.add('activated');
-    }
+    if(active){active.classList.remove('activated')}
   }
   componentDidMount(){
     this.setState({

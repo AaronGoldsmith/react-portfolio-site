@@ -7,7 +7,7 @@ const SVG = ({
     color:"#000000",
   },
   width = '100%',
-  className = '',
+  className = 'svg',
   height = '100%',
   viewBox = '10 0 44 64'
 }) =>

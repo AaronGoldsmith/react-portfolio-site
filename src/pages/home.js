@@ -29,14 +29,16 @@ class Home extends Component
 
     this.checkSticky();
 
-    if(scrollTop>=260)
+    if(this.state.scrollTop>=260)
       this.setState({scrolledDown:false})
     else
       this.setState({scrolledDown:true})
     
   }
   handleChevron = () => {
-    if(window.scrollY>50){
+    let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
+    if(scrollTop>50){
       window.scrollTo(0,0)
     }
   }
@@ -66,7 +68,6 @@ class Home extends Component
   componentDidMount(){
     this.setState({scrolledDown:true})
     window.addEventListener('scroll', this.handleScroll);
-
   }
   componentWillUnmount(){
     window.removeEventListener('scroll', this.handleScroll);
