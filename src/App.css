@@ -5,6 +5,7 @@ html{
 section{
   padding-top: 50px;
 }
+
 .text-center{
   text-align: center;
 }
@@ -67,4 +68,7 @@ p,a,div{
   margin-top: 150px;
   margin-bottom: 150px;
   padding-bottom: 50px;
+}
+.inactive {
+  display:none;
 }

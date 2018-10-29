@@ -69,8 +69,8 @@ class Portfolio extends React.Component{
           {
             // side-navigation
             this.state.sections.map((category,i) => (
-              <a href={"#"+category.cat}>
-                <li className="side-item" key={i}>
+              <a key={i} href={"#"+category.cat}>
+                <li key={i} className="side-item">
                   <em>{category.title}</em>
                 </li>
              </a>))
@@ -79,14 +79,14 @@ class Portfolio extends React.Component{
         </nav>
         {
         this.state.sections.map((category,i) => (
-          <section className="narrow" id={category.cat}>
+          <section key={i} className="narrow" id={category.cat}>
             <h1 className="cat-title">{category.title}</h1>
             <h3 className="cat-title">{category.description}</h3>
 
             <div className="flexy">
               {this.state.projects.map((proj,i) => (
                 proj.pcat === category.cat?
-                <Project project={proj} clickHandler={this.handleClick} key={i} />:''
+                <Project key={i} project={proj} clickHandler={this.handleClick} />:''
               ))}
             </div>
           </section>

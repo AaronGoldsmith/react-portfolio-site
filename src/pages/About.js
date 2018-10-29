@@ -93,14 +93,14 @@ import "./pages.css"
         <ul className='side-nav' id='side'>
         <span> &nbsp;<em>Introduction</em> </span>
           {this.state.cards.map((card,i) => (
-            <a href={"#intro-"+(i+1)}>
-            <li className="side-item" key={i}><em>{card.title}</em></li>
+            <a key={i} href={"#intro-"+(i+1)}>
+            <li className="side-item"><em>{card.title}</em></li>
             </a>))}
       </ul>
      </nav>
     <div className = "narrow">
       {this.state.cards.map((card,i) => (
-        <section id={'intro-'+(i+1)}>
+        <section key={'intro-'+i} id={'intro-'+(i+1)}>
         <Card title={card.title} key={card.title} >
         {/* conditionally render left/right icons */}
               {(card.index<card.slides-1?
@@ -125,8 +125,7 @@ import "./pages.css"
     ))}
     </div>
     </div>
-  );
-  }
+  )}
 
  }
  export default About;

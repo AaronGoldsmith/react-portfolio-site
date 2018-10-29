@@ -1,37 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./nav.css"
 
-class Navtabs extends React.Component{
-
-  state = {
-    page: "home",
-  }
-
-  handleClick = (item) => {
-    this.setState({page:item.target.className.split(' ')[1]});
-
-    setTimeout(function(){
-      let el = document.getElementById('page2');
-      if(el)  el.scrollIntoView();
-      
-    },150);
-  }
+const Navtabs = (props) => (
 
 
-
-  render(){
-    return (
       <nav id='navbar' className="navigation">
 
-          <div onClick={this.handleClick} className="nav-tab intro">
-            <Link to="/about">Introduction</Link></div>
+          <span onClick={props.handleClick} className="nav-tab intro">
+            Introduction</span>
 
-          <div onClick={this.handleClick} className="nav-tab folio">
-            <Link to="/portfolio">Portfolio</Link></div>
+          <span onClick={props.handleClick} className="nav-tab folio">
+            Portfolio</span>
 
       </nav>
-    )
-  }
-} 
+
+)
 export default Navtabs;

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import myself from "../agoldsmith.jpg"
-import Navtabs from "../components/Nav/navtabs"
+import About from "./About"
+import Portfolio from "./portfolio"
+import Navtabs from "../components/Nav/Navtabs"
 import {IconLink} from "../components/FA/IconLink"
 import './pages.css';
 
@@ -10,6 +12,7 @@ class Home extends Component
   state = {
     scrolledDown:false,
     opened: false,
+    page: "home"
   }
   checkSticky = () =>{
     let nav = document.getElementById('side')
@@ -25,7 +28,6 @@ class Home extends Component
     let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
     this.checkSticky();
-    
 
     if(scrollTop>=260)
       this.setState({scrolledDown:false})
@@ -53,6 +55,14 @@ class Home extends Component
       this.setState({opened: true})
     }
   }
+  handleClick = (nav) =>{
+    this.setState({page:nav.target.className.split(' ')[1]});
+    setTimeout(function(){
+      let el = document.getElementById('page2');
+      let height = window.innerHeight;
+      if(el)  window.scrollTo(0,height)
+    },100);
+  }
   componentDidMount(){
     this.setState({scrolledDown:true})
     window.addEventListener('scroll', this.handleScroll);
@@ -64,29 +74,40 @@ class Home extends Component
   render()
   {
     return (
-      <div className="bg" id="app">
-        <header className="App-header">
-        <div className="social-wrap">
-              
-              <div className="online-links flexy light">
-              <a id='contact-email' title='agoldsmith@alumni.scu.edu' onMouseUp={this.handleEnvelope} rel="noopener no referrer"  target='_blank' href="mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A">
-                  <i className={`fas fa-envelope${this.state.opened?'-open':''}`} />
-              </a>
-              <IconLink to="https://github.com/AaronGoldsmith" brand='github' type="brand" />
-              <IconLink to="https://www.linkedin.com/in/aarongoldsmith-1" className="normal" brand='linkedin' type="brand" />
-              </div>
-          </div>
-          <div className="avatar fadeIn">
-            <img src={myself} alt='Aaron Goldsmith'></img>
-          </div>
-          <h2 className="text-center myname fadeSlow">
-            <span id="first">Aaron </span><br/><span id="last">Goldsmith</span>
-          </h2>
-          
-          <Navtabs id="navigation" />
-        </header>
-        {((!this.state.scrolledDown)?<i onClick={this.handleChevron} className="fas fa-chevron-up"></i>:<i></i>)}
-
+      <div>
+        <div className="bg" id="app">
+          <header className="App-header">
+          <div className="social-wrap">
+                
+                <div className="online-links light">
+                <a id='contact-email' title='agoldsmith@alumni.scu.edu' onMouseUp={this.handleEnvelope} rel="noopener no referrer"  target='_blank' href="mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A">
+                    <i className={`fas fa-envelope${this.state.opened?'-open':''}`} />
+                </a>
+                <IconLink to="https://github.com/AaronGoldsmith" brand='github' type="brand" />
+                <IconLink to="https://www.linkedin.com/in/aarongoldsmith-1" className="normal" brand='linkedin' type="brand" />
+                </div>
+            </div>
+            <div className="avatar fadeIn">
+              <img src={myself} alt='Aaron Goldsmith'></img>
+            </div>
+            <h2 className="text-center myname fadeSlow">
+              <span id="first">Aaron </span><br/><span id="last">Goldsmith</span>
+            </h2>
+            
+            <Navtabs id="navigation" handleClick={this.handleClick} />
+          </header>
+          {((!this.state.scrolledDown)?<i onClick={this.handleChevron} className="fas fa-chevron-up"></i>:<i></i>)}
+        </div>
+        
+          <div>
+            {
+            this.state.page==="intro"?        
+              <About />              :
+            this.state.page==="folio"?
+              <Portfolio />: ""
+            }
+           </div>
+        
       </div>
     );
   }

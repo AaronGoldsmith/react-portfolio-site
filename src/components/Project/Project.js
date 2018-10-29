@@ -11,7 +11,7 @@ const Project = ({project,...props}) => (
     <div className="project">
             <div className={project.type==="photo"?'img':"media"}>
                 {project.imgSrc?
-                    <img className='project-img' title={project.pname} src={project.imgSrc} alt={project.pname} />:
+                    <img className='project-img' title={'(Click to enlarge)'+project.pname} src={project.imgSrc} alt={project.pname} />:
                         project.type==='doc'?   <Sheet />:
                         project.type==='webApp'?<Code />:
                                                 <Shell />

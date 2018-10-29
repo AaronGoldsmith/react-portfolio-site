@@ -15,6 +15,9 @@ code {
 .bg-standard,body{
    background-color: #F1FFFA;
 }
+body .activated{
+  background-color: rgb(52, 54, 54)
+}
 .accent-standard{
   border: 2px solid #BF4E30;
 }
