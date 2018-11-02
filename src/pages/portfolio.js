@@ -30,30 +30,35 @@ class Portfolio extends React.Component{
         {pname: "Responsive Site",keywords:['Responsive','portfolio'], pgit: "responsive-portfolio", pweb: "https://aarongoldsmith.github.io/Responsive-Portfolio/", pcat: 1, imgSrc: undefined,type:"webApp"},
         {pname: "University Pathway",keywords:[], pgit: "", pweb: "/assets/papers/pathway.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
         {pname: "Philosophy of CS",keywords:['Philosophy', 'Computer Science'], pgit: "", pweb: "/assets/papers/philosophyCS.pdf", pcat: 2, imgSrc: undefined,type:"doc"},
+        {pname: "Eco Housing", keywords:['Eco'], pgit: "", pweb: "/assets/papers/Eco\ Housing.pdf", pcat: 2, imgSrc: undefined, type:"doc"},
+        {pname: "Myanmar Politics", keywords:['Myanmar'], pgit: "", pweb: "/assets/papers/Myanmar.pdf", pcat: 2, imgSrc: undefined, type:"doc"},
         {pname: "Generative Art", keywords:['Generative','Art'], pgit: "", pweb: "/assets/papers/GenerativeArt.pdf", pcat: 2, imgSrc: undefined, type:"doc"},
         {pname: "Generative Art", keywords:['Generative','Art'], pgit: "GenerativeGold", pweb: "https://aarongoldsmith.github.io/GenerativeGold/", pcat: 3, imgSrc: undefined,type:"webApp"},
         {pname: "Python Networking", keywords:['talk.py','listen.py','diffiehellman'], pgit: "networking-labs", pweb: "https://github.com/AaronGoldsmith/networking-labs/tree/master/Lab%204", pcat: 3, imgSrc: undefined, type: 'shell'},
         {pname: "CharStream Analysis", keywords:['generate','python','data'], pgit: "", pweb:"/assets/papers/CharStreamAnalysis.pdf", pcat: 3, imgSrc: undefined, type: 'webApp'},
         {pname: "Bandwith Analysis", keywords:['lab','analysis','bandwith'], pgit: "", pweb: "/assets/papers/NetworkAnalysis.pdf", pcat: 3, imgSrc: undefined, type: 'webApp'},
+        {pname: "Graph Functions", keywords:['canvas','transformations','graphics'], pgit: "transformations", pweb: "https://aarongoldsmith.github.io/transformations", pcat: 3, imgSrc: undefined, type: 'webApp'},
+        {pname: "Force Engine", keywords:['canvas','forces','graphics'], pgit: "ForceEngine", pweb: "https://aarongoldsmith.github.io/ForceEngine", pcat: 3, imgSrc: "/assets/images/forces.png", type: 'webApp'},
+        {pname: "Game of Life", keywords:['game','gol','conway'], pgit: "game-of-life", pweb: "https://aarongoldsmith.github.io/game-of-life", pcat: 3, imgSrc: '/assets/images/gol.png', type: 'webApp'},
         {pname: "Multiplexer Lab", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer1.pdf", pcat: 3, imgSrc: undefined, type: 'doc'},
         {pname: "Multiplexer pt2", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer2.pdf", pcat: 3, imgSrc: undefined, type: 'doc'},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_01.jpg`,type:"photo"},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_02.jpg`,type:"photo"},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_04.jpg`,type:"photo"},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_07.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_10.jpg`,type:"photo"},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_08.jpg`,type:"photo"},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_09.jpg`,type:"photo"},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_03.jpg`,type:"photo"},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_05.jpg`,type:"photo"},
         {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_06.jpg`,type:"photo"},
 
-
       ],
       sections: [
         {title:"Web Dev", description: "These items were projects or assignments I submitted while attending the UC Berkeley Boot camp", cat: 1},
         {title:"University Papers", description: "These are various papers I wrote at Santa Clara University over the course of 4 years", cat: 2},
-        {title:"Computer Science Projects", description:"These are a variety of assignments, labs, and projects that I've worked on", cat: 3},
-        {title:"Photography", description: "All photographs were taken by Aaron Goldsmith ", cat: 4}
+        {title:"Computer Science", description:"These are a variety of assignments, labs, and projects that I've worked on", cat: 3},
+        {title:"Digital Photography", description: "All photographs are originals and were taken by Aaron Goldsmith ", cat: 4}
       ]
     })
   }

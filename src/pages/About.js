@@ -2,7 +2,7 @@ import React from 'react';
 import {Card,CardContent} from "../components/PortfoCard/"
 import Pagination from "../components/Nav/Pagination"
 import "./pages.css"
-
+// eslint-disable-next-line
 const regex = /[\[](.+)[\]][\(](.+)[\)]/;
  class About extends React.Component {
    state = {
@@ -10,6 +10,7 @@ const regex = /[\[](.+)[\]][\(](.+)[\)]/;
    }
    findandTransform(str){
      var str1 = str.split('[')[1]
+     // eslint-disable-next-line
      var regex = /(.+)[\]][\(](.+)[\)]/
      return str1.replace(regex, '$1|$2').split('|')
    }

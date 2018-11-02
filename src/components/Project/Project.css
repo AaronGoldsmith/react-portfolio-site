@@ -1,14 +1,14 @@
 .project{
   /* padding: 0px 25px; */
   margin-bottom: 0px;
-  height: 120px;
+  height: 100px;
   text-align: center;
   font-size: 0.8em;
   display:flow-root;
 }
 
 .spacing{
-  margin: 100px 0px;
+  margin: 80px 0px;
 }
 .small-space{
   display:justify;
@@ -23,6 +23,7 @@
   position: absolute;
   box-shadow: 0px 0px 50px 15px #333;
   left: 25%;
+  z-index: 20;
 
 }
 .project-img{
@@ -58,6 +59,7 @@
 .img{
   cursor: default;
   max-width: 305px;
+  margin: 30px;
 }
 .linkable{
   display:inline-flex;
@@ -73,6 +75,14 @@
   margin:0px;
   color: #333;
 }
+.img .activated{
+  position: fixed;
+  left: 35% !important;
+  top: 20px !important;
+  width: 40%;
+  z-index: 10;
+}
+
 @media screen and (max-width:450px){
   .project-img{
     max-width: 90%;
@@ -81,7 +91,6 @@
   .media{
     padding: 0px;
     margin: 20px 0px 0px 0px;
-   
   }
   #named{
     margin: 50px 10px 0px 30px;
@@ -91,9 +100,9 @@
   }
   
   .img .activated{
-    height: auto;
+    position: absolute;
     left: 0px !important;
-    width: 100% !important;
-
+    top: 0px !important;
+    z-index: 10;
   }
 }
