@@ -34,7 +34,7 @@ class Portfolio extends React.Component{
         {pname: "Myanmar Politics", keywords:['Myanmar'], pgit: "", pweb: "/assets/papers/Myanmar.pdf", pcat: 3, imgSrc: undefined, type:"doc"},
         {pname: "Generative Art", keywords:['Generative','Art'], pgit: "", pweb: "/assets/papers/GenerativeArt.pdf", pcat: 3, imgSrc: undefined, type:"doc"},
         {pname: "Generative Art", keywords:['Generative','Art'], pgit: "GenerativeGold", pweb: "https://aarongoldsmith.github.io/GenerativeGold/", pcat: 2, imgSrc: undefined,type:"webApp"},
-        {pname: "Python Networking", keywords:['talk.py','listen.py','diffiehellman'], pgit: "networking-labs", pweb: "https://github.com/AaronGoldsmith/networking-labs/tree/master/Lab%204", pcat: 2, imgSrc: undefined, type: 'shell'},
+        {pname: "Python Networking", keywords:['talk.py','listen.py','diffiehellman'], pgit: "networking-labs", pweb: "https://aarongoldsmith.github.io/networking-labs/", pcat: 2, imgSrc: undefined, type: 'shell'},
         {pname: "CharStream Analysis", keywords:['generate','python','data'], pgit: "", pweb:"/assets/papers/CharStreamAnalysis.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
         {pname: "Bandwith Analysis", keywords:['lab','analysis','bandwith'], pgit: "", pweb: "/assets/papers/NetworkAnalysis.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
         {pname: "Graph Functions", keywords:['canvas','transformations','graphics'], pgit: "transformations", pweb: "https://aarongoldsmith.github.io/transformations", pcat: 2, imgSrc: undefined, type: 'webApp'},

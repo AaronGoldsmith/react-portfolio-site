@@ -103,7 +103,8 @@
   }
   
   .img .activated{
-    position: absolute;
+    position: fixed;
+    width:100%;
     left: 0px !important;
     top: 0px !important;
     z-index: 10;
