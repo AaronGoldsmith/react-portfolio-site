@@ -74,18 +74,19 @@ const regex = /[\[](.+)[\]][\(](.+)[\)]/;
             ' Aaron first began a leadership role while attending High School at Head-Royce. He applied for a position on the school honor council and was accepted along with a number of students throughout the four grades.',
             ' The Honor Council was created on behalf of the students so that administrators could have student insight on relevant issues coming to the upper school head of school.',
             ' Additionally, Aaron sat on the Judicial Board of his fraternity (Kappa Sigma) for three years while attending Santa Clara University. The Judicial board is an essential part of the fraternity because it enforces the rules that were created to keep us safe by administering disciplinary consequences to those who break the rules or guidelines.',
-            ' Aaron has always enjoyed working children. He worked as an instructor at ID Tech Camps - Stanford for a number of years before joining a tutoring company, Breakout Mentors, where he could taught students similar computer science topics and languages'
           ]
         },
         {
           id: 4,
           title:'Work Experiences',
           index: 0,
-          slides: 3,
+          slides: 5,
           content:[
               'In 2014, The Head-Royce School administration asked several students to build a resource database for the school to use.',
               'A group of students, including Aaron, built the first version of the website in Drupal, and it has since gone through various iterations as current students continue to modify and upkeep the site:\n\n[https://hrsinstitute.github.io/theOH/theoh.html](HRS) ',
-              'Since the database project, Aaron has designed and built websites for several small buisnesses: smokeitbbq.com, ncsautism,org, [https://arttileoakland.com](Art Tile Oakland)'
+              'Aaron worked at iD Tech Camps - Stanford for two summers in college. In Dec. 2016 Aaron began teaching students to code with [https://breakoutmentors.com](Breakout Mentors).',
+              'Aaron taught students how to code first in Scratch, and then in Java, Javascript, or Python. ',
+              'In 2017 Aaron was an intern with the tech department at Bay Medical Management, LLC. He was responsible for creating HTML report templates, and developing an HL7 interface to bring in historic reports from two managed hospitals'
             ]
         }
       ]
