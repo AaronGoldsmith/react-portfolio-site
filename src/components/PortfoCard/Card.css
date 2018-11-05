@@ -22,6 +22,8 @@
 .card-content{
   padding: 0px 60px;
   min-height: 50px;
+  font-size: 1.3em;
+  text-justify: auto;
   text-align: justify;
   font-family: 'Open Sans', sans-serif;
   line-height: 32px;

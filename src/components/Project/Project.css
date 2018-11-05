@@ -8,6 +8,7 @@
 }
 .small-space{
   min-width: 50px;
+  height: 160px;
   margin: 30px 50px;
 }
 
@@ -42,7 +43,7 @@
 }
 
 .media{
-  margin: 0px auto;
+  margin: 30px auto;
   width: 45px;
   height: 45px;
 }
@@ -62,7 +63,7 @@
 }
 #named{
   max-width:80px;
-  min-height: 40px;
+  height: 40px;
   margin: 20px auto;
   text-align: center;
   display:block;
