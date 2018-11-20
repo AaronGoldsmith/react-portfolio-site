@@ -11,7 +11,8 @@ section{
 }
 .App-header {
 
-  background-image: linear-gradient(to top, rgba(217, 224, 224, 0.87),rgba(43, 114, 229, 0.9));
+  background-image: linear-gradient(to top, rgba(53, 169, 169, 0.87),rgba(43,114,229,0.9));
+  /* background-image: linear-gradient(to top, rgba(217, 224, 224, 0.87),rgba(43, 114, 229, 0.9)); */
   min-height: 80vh;
   stop-opacity: 0.5;
   display: flex;
@@ -25,7 +26,7 @@ section{
 }
 .bg{
   background: url('https://www.toptal.com/designers/subtlepatterns/patterns/stripes-light.png') repeat;
-  background-blend-mode: overlay;
+  background-size: contain;
 }
 
 a ,a:active,a:visited {

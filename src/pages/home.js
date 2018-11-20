@@ -19,20 +19,24 @@ class Home extends Component
 
     if(window.scrollY>window.innerHeight-80){
       nav.classList.add('sticky');
+      return true;
     }
     else{
       nav.classList.remove('sticky')
+      return false;
     }
   }
   handleScroll = () => {
     let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-
-    this.checkSticky();
-
-    if(scrollTop>=260)
+    // got a violation in console w/o this
+    if(!this.checkSticky()){
+      if(scrollTop>=260)
       this.setState({scrolledDown:false})
-    else
+       else
       this.setState({scrolledDown:true})
+    }
+
+   
     
   }
   handleChevron = () => {

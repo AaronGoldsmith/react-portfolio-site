@@ -1,11 +1,11 @@
 import React from "react"
 import {IconLink} from "../FA/IconLink"
-import Sheet from "./icons/sheet"
-import Shell from "./icons/shell"
-import Code from "./icons/code"
+import Sheet from "../../icons/sheet"
+import Shell from "../../icons/shell"
+import Code from "../../icons/code"
 import "./Project.css"
 
-const Project = ({project,...props}) => (
+export const Project = ({project,...props}) => (
   <div onClick={props.clickHandler} className={project.type==="photo"?"spacing":"small-space"}>
     <h3 id="named">  {project.pname} </h3>
     <div className="project">
@@ -38,4 +38,3 @@ const Project = ({project,...props}) => (
     </div>
     </div>
 );
-export default Project;

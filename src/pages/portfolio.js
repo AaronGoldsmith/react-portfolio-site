@@ -1,16 +1,24 @@
 import React from "react"
-import Project from "../components/Project/Project"
+import {Project} from "../components/Project"
+import {Highlight} from "../components/Highlight/Highlight"
 class Portfolio extends React.Component{
   state = {
     sections: [],
     selected: undefined
   }
+  getProject = (proj) =>{
+    return this.state.projects.find(p => p.pname===proj)
+  }
   handleClick = (btn) => {
     let active = document.getElementsByClassName('activated')[0]
     if(btn.target.classList.contains('project-img')){
       btn.target.classList.toggle('activated');
+      this.setState({selected:btn.target.alt});
     }
-    if(active){active.classList.remove('activated')}
+    if(active){
+      active.classList.remove('activated');
+      this.setState({selected: undefined})
+    }
   }
   componentDidMount(){
     this.setState({
@@ -74,8 +82,12 @@ class Portfolio extends React.Component{
              </a>))
           }
         </ul>
-        </nav>
-        {
+      </nav>
+      {
+        (this.state.selected)?
+        <Highlight Project={this.getProject(this.state.selected)} clickHandler={this.handleClick} />:<span></span>
+        }
+      {
         this.state.sections.map((category,i) => (
           <section key={i} className="narrow" id={category.cat}>
             <h1 className="cat-title">{category.title}</h1>
@@ -89,8 +101,9 @@ class Portfolio extends React.Component{
             </div>
           </section>
 
-        ))}
-      </div>
+        ))
+      }
+    </div>
   );
 
   }

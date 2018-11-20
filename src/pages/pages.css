@@ -58,6 +58,7 @@ div.avatar > img{
 }
 .side-nav.sticky{
   top: 15px;
+  padding: -20px 0px 0px 0px;
   width: 300px;
   left: -35px;
 }
@@ -100,6 +101,7 @@ div.avatar > img{
   margin: 50px 0px;
   height:100%;
 }
+
 .online-links{
   position: absolute;
   right: -25px;
@@ -129,6 +131,8 @@ div.avatar > img{
   }
   .side-nav.sticky{
     top: 35px;
+    padding: 20px 0px 0px 40px;
+
     display:initial;
   }
   div.avatar{
@@ -164,7 +168,7 @@ div.avatar > img{
     padding-bottom: 50px;
   }
   .side-nav{
-    background: #eeeeeecb;
+    background: #eeeeee;
   }
   .narrow{
     margin: 0px;
