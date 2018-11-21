@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import myself from "../agoldsmith.png"
+import myself from "../agoldsmith.JPG"
 import About from "./About"
 import Portfolio from "./portfolio"
 import Navtabs from "../components/Nav/Navtabs"
