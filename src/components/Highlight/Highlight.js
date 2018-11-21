@@ -15,11 +15,10 @@ const getPage = (github) => {
            let title = $('.markdown-body').children()[0];
            let des = $('.markdown-body').children().slice(1)
 
-            title.children.forEach(child =>  console.log(child.type==="text"?child.data:"============") )
-            console.log(des)
-
-            des.map(p => console.log(des[p].childNodes.pop().data))
-          }});
+            // title.children.forEach(child =>  console.log(child.type==="text"?child.data:"============") )
+            // let text = [];
+            $('#result').val(des.children().text());
+         }});
 }
 
 export const Highlight = ({Project,clickHandler}) => (
@@ -44,6 +43,8 @@ export const Highlight = ({Project,clickHandler}) => (
       getPage(`https://cors-anywhere.herokuapp.com/${Project.pgit}`):
       getPage(`https://cors-anywhere.herokuapp.com/https://github.com/AaronGoldsmith/${Project.pgit}`)
       }
+      <div id="result"></div>
+
   </div>
 
 );
