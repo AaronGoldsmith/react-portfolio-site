@@ -6,8 +6,11 @@ class Portfolio extends React.Component{
     sections: [],
     selected: undefined
   }
-  getProject = (proj) =>{
-    return this.state.projects.find(p => p.pname===proj)
+  getProject = () =>{
+    return this.state.projects.find(p => p.pname===this.state.selected)
+  }
+  getDescription = () => {
+    return this.state.descriptions[this.state.selected];
   }
   handleClick = (btn) => {
     let active = document.getElementsByClassName('activated')[0]
@@ -22,6 +25,10 @@ class Portfolio extends React.Component{
   }
   componentDidMount(){
     this.setState({
+      descriptions: {
+        "Hangman": "This game was developed during the Coding Boot Camp. This was project #3. If you run out of guesses, your stick figure dies and you recieve a screen with the correct answer",
+        "Stock Wars":"Stock Wars is an application where users are able to compete with their friends, or publically using \"fake money\" on the stock market. Users will be able to have a set beginning cash amount and then invest in any number of stocks to see how they perform"
+      },
       // if using mongoDB, this will be where API gets called for data
       projects: [ 
         {pname: "Hangman",keywords:[], pgit: "hangman", pweb: "https://aarongoldsmith.github.io/hangman/", pcat: 1, imgSrc: "/assets/images/hangman-sample.png", type:"webApp" },
@@ -84,8 +91,12 @@ class Portfolio extends React.Component{
         </ul>
       </nav>
       {
-        (this.state.selected)?
-        <Highlight Project={this.getProject(this.state.selected)} clickHandler={this.handleClick} />:<span></span>
+        this.state.selected?
+        <Highlight 
+           Project={this.getProject()} 
+           clickHandler={this.handleClick} 
+           description={this.getDescription()}
+              />:<span></span>
         }
       {
         this.state.sections.map((category,i) => (

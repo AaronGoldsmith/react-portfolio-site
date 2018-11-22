@@ -4,24 +4,31 @@ import {Icon} from "../FA/Icon"
 import Sheet from "../../icons/sheet"
 import Shell from "../../icons/shell"
 import Code from "../../icons/code"
-var request = require('request');
-var cheerio = require('cheerio');
+import Cors from "./Cors"
+// var request = require('request');
+// var cheerio = require('cheerio');
 
 
-const getPage = (github) => {
-  request(github, function(err, resp, html) {
-          if (!err && resp.statusCode === 200){
-            const $ = cheerio.load(html);
-           let title = $('.markdown-body').children()[0];
-           let des = $('.markdown-body').children().slice(1)
+// const getPage = (github) => {
+//   request(github, function(err, resp, html) {
+//           if (!err && resp.statusCode === 200){
+//             const $ = cheerio.load(html);
+//           //  let title = $('.markdown-body').children()[0].firstChild.next.data;
+//           //  let des = $('.markdown-body').children()[1].firstChild.data;
+//            let body = $('.markdown-body').children().slice(1)
+//            let arr = [];
+//            body.each(line => {
+//              let sent = body[line].firstChild;
+//              if(sent.data)
+//               arr.push(body[line].firstChild.data)
+//             });
+//             return arr;
+//             // console.log(title," : ",des);
+//             // $("#result").append($("<h2>").html(des))
+//          }});
+// }
 
-            // title.children.forEach(child =>  console.log(child.type==="text"?child.data:"============") )
-            // let text = [];
-            $('#result').val(des.children().text());
-         }});
-}
-
-export const Highlight = ({Project,clickHandler}) => (
+export const Highlight = ({Project,clickHandler,description}) => (
   <div className="Highlight">
       <h2 id="close" onClick={clickHandler} className="rightX"><Icon type="times"/></h2>
      <h2 className="card-header">{Project.pname}</h2>
@@ -33,17 +40,15 @@ export const Highlight = ({Project,clickHandler}) => (
                   title={Project.pname} 
                   src={Project.imgSrc} 
                   alt={Project.pname} />
-            </div>:
-            Project.type==='doc'?   <Sheet />:
-            Project.type==='webApp'?<Code />:
-                                    <Shell />
+            </div>:<span></span>
         }
+        <div>{description}</div>
+
       </div>
-      {Project.pgit.indexOf("github")>0?
-      getPage(`https://cors-anywhere.herokuapp.com/${Project.pgit}`):
-      getPage(`https://cors-anywhere.herokuapp.com/https://github.com/AaronGoldsmith/${Project.pgit}`)
-      }
-      <div id="result"></div>
+      
+      
+
+      {/* <Cors github={Project.pgit} /> */}
 
   </div>
 
