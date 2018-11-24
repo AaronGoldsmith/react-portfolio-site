@@ -4,43 +4,54 @@ import {Highlight} from "../components/Highlight/Highlight"
 class Portfolio extends React.Component{
   state = {
     sections: [],
+    descriptions: [],
     selected: undefined
   }
   getProject = () =>{
+    console.log('trying to find ' + this.state.selected)
     return this.state.projects.find(p => p.pname===this.state.selected)
   }
   getDescription = () => {
     return this.state.descriptions[this.state.selected];
   }
+  closeInfo = () => {
+    this.setState({selected: undefined})
+  }
   handleClick = (btn) => {
-    let active = document.getElementsByClassName('activated')[0]
-    if(btn.target.classList.contains('project-img')){
-      btn.target.classList.toggle('activated');
-      this.setState({selected:btn.target.alt});
+    let named = btn.target.alt
+    if(btn.target.classList.contains("img")){
+      document.getElementsByClassName('img')[0].classList.remove('activated');
     }
-    if(active){
-      active.classList.remove('activated');
-      this.setState({selected: undefined})
+    else{
+      this.setState({selected: named});
     }
+  
   }
   componentDidMount(){
     this.setState({
       descriptions: {
-        "Hangman": "This game was developed during the Coding Boot Camp. This was project #3. If you run out of guesses, your stick figure dies and you recieve a screen with the correct answer",
-        "Stock Wars":"Stock Wars is an application where users are able to compete with their friends, or publically using \"fake money\" on the stock market. Users will be able to have a set beginning cash amount and then invest in any number of stocks to see how they perform"
+        "Hangman": "A classic hangman game! The goal of the game is to determine the secret word before your player dies. Each incorrect guess results in a limb getting added to your animated character",
+        "Stock Wars": "Stock Wars is an application where users are able to compete with their friends using \"fake money\" by investing in the real the stock market. Users may choose how cash to start off with and then can track their progress as they research and invest in the US stock market. The stock simulator was built as a group project and is intended to be used for educational purposes",
+        "VG Nexus": "Video Game Nexus is a place for people to play, upload, share, and discuss javascript-based web games. You do not need an account to play games here, but if you choose to make an account, you can participate in our Forum and upload your own games. This website is a passion project for us; we are all about learning and helping each other become better at making websites and games, and we would like to extend an invitation to you to join us.",
+        "Bamazon": "",
+        "Train Sim": "",
+        "LIRI App": "The node application can take in 1 of 4 commands. `concert-this <band>` - Takes in one argument, the name of the band. `spotify-this-song <song>` - expects the title of a song and will return information along witha a 30s preview. `movie-this <movie>` - Expects a movie title, and will return the plot summary along with actors, year, etc. `do-what-it-says` - takes in no arguments, but expects a text file called “random.txt” to include the function and its respective parameter",
+        "Clicker Game": "",
+        "Onion Scraper": "",
+        "Memify gifs": ""
       },
       // if using mongoDB, this will be where API gets called for data
       projects: [ 
-        {pname: "Hangman",keywords:[], pgit: "hangman", pweb: "https://aarongoldsmith.github.io/hangman/", pcat: 1, imgSrc: "/assets/images/hangman-sample.png", type:"webApp" },
-        {pname: "Stock Wars", keywords:['Simulation','Stock Market'], pgit: "stock-wars", pweb: "https://aqueous-brook-18608.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/stock-sample.png`,type:"webApp"},
-        {pname: "VG Nexus", keywords:['Game Development','Community'], pgit: "https://github.com/JackRa88it/VG-Nexus", pweb: "https://vgnexus.com", pcat: 1, imgSrc: `/assets/images/vg-sample.png`,type:"webApp"},
+        {pname: "Hangman",keywords:["2D canvas", "Game Design","Bootstrap", "p5.js"], pgit: "hangman", pweb: "https://aarongoldsmith.github.io/hangman/", pcat: 1, imgSrc: "/assets/images/hangman-sample.png", type:"webApp" },
+        {pname: "Stock Wars", keywords:['Simulation','Stock Market','handlebrs'], pgit: "stock-wars", pweb: "https://aqueous-brook-18608.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/stock-sample.png`,type:"webApp"},
+        {pname: "VG Nexus", keywords:['Game Development','AWS','React','User Authentication'], pgit: "https://github.com/JackRa88it/VG-Nexus", pweb: "https://vgnexus.com", pcat: 1, imgSrc: `/assets/images/vg-sample.png`,type:"webApp"},
         {pname: "Bamazon",keywords:['CLI','Node.js'], pgit: "Bamazon", pweb: "https://aarongoldsmith.github.io/Bamazon/", pcat: 1, imgSrc: undefined,type:"shell"},
         {pname: "Train Sim",keywords:['Firebase'], pgit: "Train-Time", pweb: "https://aarongoldsmith.github.io/Train-Time/", pcat: 1, imgSrc: "/assets/images/train-sample.png",type:"webApp"},
-        {pname: "LIRI App", keywords:['Spotify','API','Node.js'], pgit: "liri-node-app", pweb: "https://aarongoldsmith.github.io/liri-node-app/", pcat: 1, imgSrc: undefined,type:"shell"},
-        {pname: "Clicker Game",keywords:['React'], pgit: "charlie-game", pweb: "https://aarongoldsmith.github.io/charlie-game/", pcat: 1, imgSrc: `/assets/images/charlie-sample.png`,type:"webApp"},
-        {pname: "Onion Scraper",keywords:['News Scraper','The Onion News'], pgit: "news-scraper", pweb: "https://whispering-dusk-64800.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/news-sample.png`,type:"webApp"},
-        {pname: "Memify gifs",keywords:['giphy','API'], pgit: "GIFTastic", pweb: "https://aarongoldsmith.github.io/GIFTastic/", pcat: 1, imgSrc: undefined,type:"webApp"},
-        {pname: "Timed Trivia",keywords:['Quiz','setTimeout'], pgit: "TriviaGame", pweb: "https://aarongoldsmith.github.io/TriviaGame/", pcat: 1, imgSrc: undefined,type:"webApp"},
+        {pname: "LIRI App", keywords:['Spotify API','Node.js'], pgit: "liri-node-app", pweb: "https://aarongoldsmith.github.io/liri-node-app/", pcat: 1, imgSrc: undefined,type:"shell"},
+        {pname: "Clicker Game",keywords:['React.js','Digital Photography'], pgit: "charlie-game", pweb: "https://aarongoldsmith.github.io/charlie-game/", pcat: 1, imgSrc: `/assets/images/charlie-sample.png`,type:"webApp"},
+        {pname: "Onion Scraper",keywords:['Cheerio','The Onion News'], pgit: "news-scraper", pweb: "https://whispering-dusk-64800.herokuapp.com/", pcat: 1, imgSrc: `/assets/images/news-sample.png`,type:"webApp"},
+        {pname: "Memify gifs",keywords:['Giphy API','Bootstrap'], pgit: "GIFTastic", pweb: "https://aarongoldsmith.github.io/GIFTastic/", pcat: 1, imgSrc: undefined,type:"webApp"},
+        {pname: "Timed Trivia",keywords:['Timed Quiz','Interval/Timeouts'], pgit: "TriviaGame", pweb: "https://aarongoldsmith.github.io/TriviaGame/", pcat: 1, imgSrc: undefined,type:"webApp"},
         {pname: "University Pathway",keywords:[], pgit: "", pweb: "/assets/papers/pathway.pdf", pcat: 3, imgSrc: undefined,type:"doc"},
         {pname: "Philosophy of CS",keywords:['Philosophy', 'Computer Science'], pgit: "", pweb: "/assets/papers/philosophyCS.pdf", pcat: 3, imgSrc: undefined,type:"doc"},
         {pname: "Eco Housing", keywords:['Eco'], pgit: "", pweb: "/assets/papers/Eco Housing.pdf", pcat: 3, imgSrc: undefined, type:"doc"},
@@ -94,7 +105,7 @@ class Portfolio extends React.Component{
         this.state.selected?
         <Highlight 
            Project={this.getProject()} 
-           clickHandler={this.handleClick} 
+           clickHandler={this.closeInfo} 
            description={this.getDescription()}
               />:<span></span>
         }

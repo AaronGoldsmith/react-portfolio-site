@@ -6,19 +6,28 @@
   z-index: 99;
 }
 #img-cont{
-  width: 400px;
-  min-height: 400px;
+  min-width: 320px;
+  min-height: 150px;
   overflow: hidden;
+  margin-top: 90px;
+  margin-right: 20px;
+
 }
 .proj-img{
-  margin-top: 150px;
-  max-width: 100%;
-  max-height: 100%;
+  margin-left: 0px;
+  max-width: 400px;
+  height: auto;
+  max-height: 250px;
 }
 .card-header{
   position: absolute;
   left: 25%;
+  top: -10px;
   font-size: 2em;
+}
+.card-header h2{
+  display:inline-flex;
+  margin-right: 20px;
 }
 .rightX:hover{
   cursor: pointer;
@@ -27,13 +36,57 @@
   position: absolute;
   right: 10%;
 }
+.fas, .fab{
+  color: #333;
+}
+.fas:hover{
+  color: black;
+}
+.fab:hover{
+  color: rgba(0,10,200,0.8);
+  cursor: pointer;
+}
+#descript{
+  margin-top: 50px;
+  line-height: 1.45em;
+  display:flow-root;
+  font-size: 1.1em;
+  padding-right: 4px;
+}
+.small{
+  font-size: 12px;
+}
+#rr{
+  right: 100px;
+  position:absolute;
+  font-size: 0.8em;
+  margin-right: 70px;
+  padding: 1px;
+  border-bottom: 1px solid #333;
+  /* width:100%; */
+  bottom: 8px;
+}
+#rr ul{
+  display:flex;
+  bottom: 0px;
+}
+#rr li{
+  margin-right: 25px;
+  list-style-type: none;
+}
 
+.linkable{
+  margin: 20px;
+  display: table;
+  position: absolute;
+  bottom: 0px;
+  left: 120px;
+}
 .content{
   width: 80%;
-  height: 80vh;
-  padding: 20px;
-
-  display:flex;
+  height: auto;
+  padding: 25px 25px 50px 25px;
+  display: flex;
   margin: 0px auto;
   background: #eeeeee;
   box-shadow: 0px 0px 50px 15px #333;
@@ -43,10 +96,22 @@
   .Highlight{
     width: 100%;
     left: 0px;
-    min-height: 80vh;
   }
   .card-header{
     left: 10%;
   }
-
+}
+@media screen and (max-width:450px){
+  .Highlight{
+    width: 100%;
+    margin-left: -60px;
+  }
+  .proj-img{
+    margin-left: 0px;
+    max-width: 200px;
+    max-height: 250px;
+  }
+  .rightX{
+    left: 25px;
+  }
 }

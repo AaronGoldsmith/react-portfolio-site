@@ -71,8 +71,7 @@
 .media a{
   color: #333;
 }
-.img .activated,
-/* .media .project-img.activated */
+.img .activated
 {
   position: fixed;
   left: 25% !important;
