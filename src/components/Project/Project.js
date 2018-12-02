@@ -1,5 +1,5 @@
 import React from "react"
-// import {IconLink} from "../FA/IconLink"
+import {IconLink} from "../FA/IconLink"
 import Sheet from "../../icons/sheet"
 import Shell from "../../icons/shell"
 import Code from "../../icons/code"
@@ -17,8 +17,20 @@ export const Project = ({project,...props}) => (
                                                 <Shell/>
                 }
                 
+                    <div id="links">
+                    {/* when user hovers over project, reveal links */}
+                    {/* to only allow the images to link: !project.imgSrc&& */}
+                        {project.pgit.length>1?<IconLink to={ 
+                            //  check for 'https' --> orig repo
+                            //  if string not found, link to my github
+                            project.pgit.substring(0,5)!=='https'? "https://github.com/AaronGoldsmith/"+ project.pgit:
+                            project.pgit} brand={'github'} type="brand" /> :''
+                        }     
+                        {project.pweb.length>0?<IconLink to={project.pweb} type="external-link-alt" />:''}            
+                
                 </div>
-            </div>           
+                </div>
+            </div>          
         <div>
         {/*  seo  */}
         <i hidden><em>{project.keywords.join(', ')}</em></i>
