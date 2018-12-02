@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import myself from "../agoldsmith.png"
 import About from "./About"
 import Portfolio from "./portfolio"
 import Navtabs from "../components/Nav/Navtabs"
@@ -94,7 +93,7 @@ class Home extends Component
                 </div>
             </div>
             <div className="avatar fadeIn">
-              <img src={myself} alt='Aaron Goldsmith'></img>
+              <img src="assets/images/agoldsmith.jpg" alt='Aaron Goldsmith' id="profileImg"></img>
             </div>
             <h2 className="text-center myname fadeSlow">
               <span id="first">Aaron </span><br/><span id="last">Goldsmith</span>

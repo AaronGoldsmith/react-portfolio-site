@@ -10,11 +10,13 @@ div.avatar{
 div.avatar > img{
   height: 100%;
   width: 100%;
-  top:50%;
-  object-position: 50% 0%; 
+  object-position: -10% 10%; 
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0px 2px 16px 4px #333333aa
+}
+#profileImg{
+  margin-right:4px;
 }
 #last{
   margin-left: -20px;
