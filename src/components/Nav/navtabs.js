@@ -1,7 +1,7 @@
 import React from "react";
 import "./nav.css"
 
-const Navtabs = (props) => (
+export const Navtabs = (props) => (
 
 
       <nav id='navbar' className="navigation">
@@ -14,5 +14,4 @@ const Navtabs = (props) => (
 
       </nav>
 
-)
-export default Navtabs;
+);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import About from "./About"
 import Portfolio from "./portfolio"
-import Navtabs from "../components/Nav/Navtabs"
+import {Navtabs} from "../components/Nav"
 import {IconLink} from "../components/FA/IconLink"
 import './pages.css';
 

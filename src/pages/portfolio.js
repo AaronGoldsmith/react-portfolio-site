@@ -33,12 +33,12 @@ class Portfolio extends React.Component{
         "Hangman": "A classic hangman game! The goal of the game is to determine the secret word before your player dies. Each incorrect guess results in a limb getting added to your animated character",
         "Stock Wars": "Stock Wars is an application where users are able to compete with their friends using \"fake money\" by investing in the real the stock market. Users may choose how cash to start off with and then can track their progress as they research and invest in the US stock market. The stock simulator was built as a group project and is intended to be used for educational purposes",
         "VG Nexus": "Video Game Nexus is a place for people to play, upload, share, and discuss javascript-based web games. You do not need an account to play games here, but if you choose to make an account, you can participate in our Forum and upload your own games. This website is a passion project for us; we are all about learning and helping each other become better at making websites and games, and we would like to extend an invitation to you to join us.",
-        "Bamazon": "",
+        "Bamazon": "CLI for simulating a shopping experience",
         "Train Sim": "",
         "LIRI App": "The node application can take in 1 of 4 commands. `concert-this <band>` - Takes in one argument, the name of the band. `spotify-this-song <song>` - expects the title of a song and will return information along witha a 30s preview. `movie-this <movie>` - Expects a movie title, and will return the plot summary along with actors, year, etc. `do-what-it-says` - takes in no arguments, but expects a text file called “random.txt” to include the function and its respective parameter",
         "Clicker Game": "",
-        "Onion Scraper": "",
-        "Memify gifs": ""
+        "Onion Scraper": "Web Scraper for the Onion News Network",
+        "Memify gifs": "Add a gif button, then add memes"
       },
       // if using mongoDB, this will be where API gets called for data
       projects: [ 
@@ -66,21 +66,13 @@ class Portfolio extends React.Component{
         {pname: "Game of Life", keywords:['game','gol','conway'], pgit: "game-of-life", pweb: "https://aarongoldsmith.github.io/game-of-life", pcat: 2, imgSrc: '/assets/images/gol.png', type: 'webApp'},
         {pname: "Multiplexer Lab", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer1.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
         {pname: "Multiplexer pt2", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer2.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
-        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_01.jpg`,type:"photo"},
-        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_02.jpg`,type:"photo"},
-        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_04.jpg`,type:"photo"},
-        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_09.jpg`,type:"photo"},
-        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_07.jpg`,type:"photo"},
-        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_10.jpg`,type:"photo"},
-        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_08.jpg`,type:"photo"},
-        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_03.jpg`,type:"photo"},
-        {pname: "",keywords:[''], pgit: "", pweb: "", pcat: 4, imgSrc: `/assets/photography/IMG_06.jpg`,type:"photo"},
+        {pname: "",keywords:[''], pgit: "", pweb: "https://agoldsmith.exposure.co/", pcat: 4, imgSrc: `/assets/photography/IMG_01.jpg`,type:"photo"},
       ],
       sections: [
         {title:"Web Dev/CLI Apps", description: "These items were projects or assignments I submitted while attending the UC Berkeley Boot camp", cat: 1},
         {title:"Computer Science", description:"These are a variety of assignments, labs, and projects that I've worked on", cat: 2},
         {title:"University Papers", description: "These are various papers I wrote at Santa Clara University over the course of 4 years", cat: 3},
-        {title:"Digital Photography", description: "All photographs are originals and were taken by Aaron Goldsmith ", cat: 4}
+        {title:"Digital Photography", description: "Original Photography By Aaron Goldsmith", cat: 4}
       ]
     })
   }
@@ -119,12 +111,16 @@ class Portfolio extends React.Component{
               {this.state.projects.map((proj,i) => (
                 proj.pcat === category.cat?
                 <Project key={i} project={proj} clickHandler={this.handleClick} />:''
-              ))}
+              ))}       
             </div>
           </section>
-
-        ))
+          
+        )
+        
+        )
       }
+      <p class='centered'>{'View more photos at https://agoldsmith.exposure.co'}</p>
+
     </div>
   );
 

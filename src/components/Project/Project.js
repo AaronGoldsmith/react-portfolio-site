@@ -1,8 +1,6 @@
 import React from "react"
 import {IconLink} from "../FA/IconLink"
-import Sheet from "../../icons/sheet"
-import Shell from "../../icons/shell"
-import Code from "../../icons/code"
+import {SheetSV,ShellSV,CodeSV} from "../../SVIcons"
 import "./Project.css"
 
 export const Project = ({project,...props}) => (
@@ -12,9 +10,9 @@ export const Project = ({project,...props}) => (
             <div className={project.type==="photo"?'img':"media"}>
                 {project.imgSrc?
                     <img className='project-img' src={project.imgSrc} alt={project.pname} />:
-                        project.type==='doc'?   <Sheet/>:
-                        project.type==='webApp'?<Code/>:
-                                                <Shell/>
+                        project.type==='doc'?   <SheetSV/>:
+                        project.type==='webApp'?<CodeSV/>:
+                                                <ShellSV/>
                 }
                 
                     <div id="links">

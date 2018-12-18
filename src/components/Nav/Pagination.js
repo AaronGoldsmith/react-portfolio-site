@@ -1,6 +1,6 @@
 import React from "react"
 import "./nav.css"
-const Pagination = (props) => (
+export const Pagination = (props) => (
   
     <div className="pagination">
         {   
@@ -9,5 +9,3 @@ const Pagination = (props) => (
         }
     </div>
 );
-
- export default Pagination;

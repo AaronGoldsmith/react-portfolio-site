@@ -1,9 +1,9 @@
 import React from 'react';
 import {Card,CardContent} from "../components/PortfoCard/"
-import Pagination from "../components/Nav/Pagination"
+import {Pagination} from "../components/Nav/"
 import "./pages.css"
 // eslint-disable-next-line
-const regex = /[\[](.+)[\]][\(](.+)[\)]/;
+ const regex = /[\[](.+)[\]][\(](.+)[\)]/;
  class About extends React.Component {
    state = {
       cards: [],
