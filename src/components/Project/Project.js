@@ -19,7 +19,7 @@ export const Project = ({project,...props}) => (
                 
                     <div id="links">
                     {/* when user hovers over project, reveal links */}
-                    {/* to only allow the images to link: !project.imgSrc&& */}
+                    {/* to only allow the images to link: !project.imgSrc */}
                         {project.pgit.length>1?<IconLink to={ 
                             //  check for 'https' --> orig repo
                             //  if string not found, link to my github

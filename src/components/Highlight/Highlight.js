@@ -8,10 +8,8 @@ export const Highlight = ({Project,clickHandler,description}) => (
       <div>
         <h2 id="close" onClick={clickHandler} className="rightX"><Icon type="times"/></h2>
         <div className="card-header">
-        <h2>{Project.pname} </h2><span class="small">{Project.pweb.length>0?<IconLink to={Project.pweb} type="external-link-alt" />:''}</span>
+        <h2>{Project.pname} </h2><span className="small">{Project.pweb.length>0?<IconLink to={Project.pweb} type="external-link-alt" />:''}</span>
         </div>
-        {/* <div className="linkable">   
-        </div> */}
       
       <div className = "content">
           {

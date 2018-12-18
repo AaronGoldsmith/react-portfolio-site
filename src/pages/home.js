@@ -15,15 +15,17 @@ class Home extends Component
   }
   checkSticky = () =>{
     let nav = document.getElementById('side')
-
-    if(window.scrollY>window.innerHeight-80){
-      nav.classList.add('sticky');
-      return true;
+    if(nav){
+      if(window.scrollY>window.innerHeight-80){
+        nav.classList.add('sticky');
+        return true;
+      }
+      else{
+        nav.classList.remove('sticky')
+        return false;
+      }
     }
-    else{
-      nav.classList.remove('sticky')
-      return false;
-    }
+  
   }
   handleScroll = () => {
     let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;

@@ -1,6 +1,6 @@
 {
   "name": "react-portfolio-site",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "homepage": "https://aarongoldsmith.github.io/",
   "dependencies": {
@@ -27,6 +27,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "fsevents": "^2.0.1"
   }
 }
