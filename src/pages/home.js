@@ -95,7 +95,7 @@ class Home extends Component
                 </div>
             </div>
             <div className="avatar fadeIn">
-              <img src="assets/images/agoldsmith.jpg" alt='Aaron Goldsmith' id="profileImg"></img>
+              <img src="assets/images/agoldsmith(small).jpg" alt='Aaron Goldsmith' id="profileImg"></img>
             </div>
             <h2 className="text-center myname fadeSlow">
               <span id="first">Aaron </span><br/><span id="last">Goldsmith</span>

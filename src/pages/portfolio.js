@@ -66,6 +66,7 @@ class Portfolio extends React.Component{
         {pname: "Game of Life", keywords:['game','gol','conway'], pgit: "game-of-life", pweb: "https://aarongoldsmith.github.io/game-of-life", pcat: 2, imgSrc: '/assets/images/gol.png', type: 'webApp'},
         {pname: "Multiplexer Lab", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer1.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
         {pname: "Multiplexer pt2", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer2.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
+        {pname: "",keywords:[''], pgit: "", pweb: "https://agoldsmith.exposure.co/", pcat: 4, imgSrc: `/assets/photography/IMG_05.jpg`,type:"photo"},
         {pname: "",keywords:[''], pgit: "", pweb: "https://agoldsmith.exposure.co/", pcat: 4, imgSrc: `/assets/photography/IMG_01.jpg`,type:"photo"},
       ],
       sections: [
@@ -119,7 +120,7 @@ class Portfolio extends React.Component{
         
         )
       }
-      <p class='centered'>{'View more photos at https://agoldsmith.exposure.co'}</p>
+      <p className='centered'>{'View more photos at https://agoldsmith.exposure.co'}</p>
 
     </div>
   );

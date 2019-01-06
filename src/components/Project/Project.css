@@ -59,9 +59,8 @@
 }
 
 .img{
-  cursor: default;
   max-width: 40%;
-  /* margin: 0px auto; */
+  float:left;
 }
 .linkable{
   width: 75px;
