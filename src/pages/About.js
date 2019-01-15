@@ -69,7 +69,7 @@ import "./pages.css"
           id: 3,
           title:'Trusted & Responsible',
           index: 0,
-          slides: 4,
+          slides: 3,
           content:[
             ' Aaron first began a leadership role while attending High School at Head-Royce. He applied for a position on the school honor council and was accepted along with a number of students throughout the four grades.',
             ' The Honor Council was created on behalf of the students so that administrators could have student insight on relevant issues coming to the upper school head of school.',
