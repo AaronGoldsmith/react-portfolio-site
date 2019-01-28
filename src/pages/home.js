@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import About from "./About"
+import Portrait from "../agoldsmith.png"
 import Portfolio from "./portfolio"
 import {Navtabs} from "../components/Nav"
 import {IconLink} from "../components/FA/IconLink"
@@ -27,6 +28,7 @@ class Home extends Component
     }
   
   }
+
   handleScroll = () => {
     let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
     // got a violation in console w/o this
@@ -95,7 +97,7 @@ class Home extends Component
                 </div>
             </div>
             <div className="avatar fadeIn">
-              <img src="assets/images/agoldsmith(small).jpg" alt='Aaron Goldsmith' id="profileImg"></img>
+              <img src={Portrait} alt='Aaron Goldsmith' id="profileImg"></img>
             </div>
             <h2 className="text-center myname fadeSlow">
               <span id="first">Aaron </span><br/><span id="last">Goldsmith</span>

@@ -1,17 +1,17 @@
 {
   "name": "Aaron Goldsmith Portfolio React",
-  "short_name": "Goldsmith",
+  "short_name": "Portfolio",
   "icons": [
     {
-      "src": "assets/images/A-192.png",
-      "sizes": "192x186",
-      "type": "image/x-icon"
+      "src": "assets/images/me-48.jpeg",
+      "sizes": "48x48",
+      "type": "image/jpeg",
+      "purpose": "badge"
     },
     {
-      "src": "assets/images/A-512.png",
-      "sizes": "528x512",
-      "type": "image/x-icon",
-      "purpose": "badge"
+      "src": "assets/images/A-160.png",
+      "sizes": "160x160",
+      "type": "image/png"
     }
   ],
   "start_url": "/",
