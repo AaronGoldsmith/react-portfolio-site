@@ -3,19 +3,19 @@
   "short_name": "Portfolio",
   "icons": [
     {
-      "src": "assets/images/me-48.jpeg",
-      "sizes": "48x48",
-      "type": "image/jpeg",
-      "purpose": "badge"
+      "src": "assets/images/AG.png",
+      "sizes": "192x186",
+      "type": "image/x-icon"
     },
     {
-      "src": "assets/images/A-160.png",
-      "sizes": "160x160",
-      "type": "image/png"
+      "src": "assets/images/AG.png",
+      "sizes": "528x512",
+      "type": "image/x-icon",
+      "purpose": "badge"
     }
   ],
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "../public/index.html",
+  "scope": "../public/",
   "display": "standalone",
   "theme_color": "#E86F2E",
   "background_color": "#3483E3"
