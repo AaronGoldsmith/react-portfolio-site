@@ -2,12 +2,11 @@
   "name": "react-portfolio-site",
   "version": "0.1.3",
   "private": false,
+  "homepage": "https://aarongoldsmith.github.io",
   "dependencies": {
-    "dotenv": "^6.1.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "^2.1.3",
-    "webfontloader": "^1.6.28"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
