@@ -49,7 +49,7 @@ import "./pages.css"
           slides: 3,
           content: [
             ' Aaron is a creative and hard-working individual with a life-long love and fascination for technology',
-            ' Prior to moving down to Santa Clara to attend College, Aaron lived in Oakland for the first eighteen years of his life',
+            ' Prior to moving to Santa Clara to attend College, Aaron lived in Oakland for the first eighteen years of his life',
             ' He had the privilege of attending smaller academic schools in Oakland, which he believes helped foster his mentality of creating “positive change” in the world'
           ]
         },
