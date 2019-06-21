@@ -24,7 +24,7 @@ section{
   border-bottom: 7px solid #E86F2E;
 }
 .bg{
-  background: url('./stripes-light.png') repeat;
+  background: url('./stripes.png') repeat;
   background-size: contain;
 }
 
