@@ -7,11 +7,20 @@
   padding: 25px;
 }
 .card {
-  background-color: rgba(248, 248, 248, 0.714) ;
-  background-clip: border-box;
+  background-color: white;
   border: 3px solid rgb(214, 221, 219);
-
-  box-shadow: 0px 0px 7px 5px #333333aa;
+  border-bottom: none;
+}
+.card-footer{
+  background-image: linear-gradient(to right ,#00FA74,#1183F9,#00FA74 );
+  max-height: 0px;
+  position: absolute;
+  bottom: 0px;
+  left:-3px;
+  width: 100%;
+  padding: 2px !important;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .card-title{
   margin: 32px auto;
@@ -37,6 +46,7 @@
 }
 @media screen and (min-width:1100px){
   .card{margin: 10px 300px 10px 50px;}
+  
 }
 @media screen and (max-width: 850px) {
   .card{
@@ -45,13 +55,24 @@
 }
 @media screen and (max-width: 750px) {
   .card{
-    max-width:95%;
+    width: 84%;
     min-height: 50px;
     margin: 0px;
     padding: 10px;
   }
   .card-content{
-    padding: 0px;
-    overflow:visible;
+    font-size: 1em;
+    max-height: 205px;
+    overflow:scroll;
+    width: unset;
+  }
+  .card::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 0px;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.25)
+  }
+  .card::-webkit-scrollbar-thumb{
+    background: 0 0;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.25)
   }
 }

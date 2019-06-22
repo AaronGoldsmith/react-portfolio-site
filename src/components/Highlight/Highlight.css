@@ -1,5 +1,5 @@
 .Highlight{
-  width: 50%;
+  max-width: 50%;
   position: fixed;
   left: 25%;
   top: 5%;
@@ -67,6 +67,7 @@
 #rr ul{
   display:flex;
   bottom: 0px;
+  padding-inline-start: 0px;
 }
 #rr li{
   margin-right: 25px;
@@ -92,24 +93,38 @@
 }
 @media screen and (min-width:450px){
   .Highlight{
-    width: 100%;
     left: 0px;
   }
   .card-header{
     left: 10%;
   }
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:600px){
   .Highlight{
-    width: 100%;
-    margin-left: -60px;
+    max-width: unset;
+    /* margin-left: -60px; */
+    height: 100%;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
   .proj-img{
     margin-left: 0px;
     max-width: 200px;
     max-height: 250px;
   }
-  .rightX{
-    left: 25px;
+  .side-nav.sticky{
+    top: 0px;
+    width: 100%;
+    display: inherit;
+    font-size: 0.8em;
+  }
+  li.side-item{
+    margin: 10px 0px;
+    text-align:left;
+  }
+  .content{
+    overflow-y: scroll;
   }
 }

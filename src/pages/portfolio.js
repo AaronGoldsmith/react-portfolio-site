@@ -66,14 +66,14 @@ class Portfolio extends React.Component{
         {pname: "Game of Life", keywords:['game','gol','conway'], pgit: "game-of-life", pweb: "https://aarongoldsmith.github.io/game-of-life", pcat: 2, imgSrc: '/assets/images/gol.png', type: 'webApp'},
         {pname: "Multiplexer Lab", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer1.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
         {pname: "Multiplexer pt2", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer2.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
-        {pname: "",keywords:[''], pgit: "", pweb: "https://agoldsmith.exposure.co/", pcat: 4, imgSrc: `/assets/photography/IMG_05.jpg`,type:"photo"},
-        {pname: "",keywords:[''], pgit: "", pweb: "https://agoldsmith.exposure.co/", pcat: 4, imgSrc: `/assets/photography/IMG_01.jpg`,type:"photo"},
+        // {pname: "",keywords:[''], pgit: "", pweb: "https://agoldsmith.exposure.co/", pcat: 4, imgSrc: `/assets/photography/IMG_05.jpg`,type:"photo"},
+        // {pname: "",keywords:[''], pgit: "", pweb: "https://agoldsmith.exposure.co/", pcat: 4, imgSrc: `/assets/photography/IMG_01.jpg`,type:"photo"},
       ],
       sections: [
         {title:"Development Projects", description: "These items were projects or assignments I submitted while attending the UC Berkeley Boot camp", cat: 1},
         {title:"Computer Science", description:"These are a variety of assignments, labs, and projects that I've worked on", cat: 2},
         {title:"University Papers", description: "These are various papers I wrote at Santa Clara University over the course of 4 years", cat: 3},
-        {title:"Digital Photography", description: "Original Photography By Aaron Goldsmith", cat: 4}
+        // {title:"Digital Photography", description: "Original Photography By Aaron Goldsmith", cat: 4}
       ]
     })
   }
@@ -104,9 +104,9 @@ class Portfolio extends React.Component{
         }
       {
         this.state.sections.map((category,i) => (
-          <section key={i} className="narrow" id={category.cat}>
+          <section key={i} className="narrow" id={category.cat} >
             <h1 className="cat-title">{category.title}</h1>
-            <h3 className="cat-title">{category.description}</h3>
+            <h3 className="cat-title" >{category.description}</h3>
 
             <div className={`${category.title !== PHOTO ? "flexy" : "table"}`}>
               {this.state.projects.map((proj,i) => (
@@ -121,7 +121,7 @@ class Portfolio extends React.Component{
         )
       }
       <p className='centered'>This website is work of Aaron Goldsmith</p>
-      <small>Site development ongoing. Last deployment: <em>6/21/2019</em></small>
+      <p className="centered">Site development ongoing. Last deployment: <em>6/21/2019</em></p>
 
     </div>
   );

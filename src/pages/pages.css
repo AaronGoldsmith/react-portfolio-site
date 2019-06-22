@@ -42,7 +42,7 @@ div.avatar > img{
   padding: 20px;
 }
 
-.narrow:not(:last-child){
+.narrow:last-child{
   border-bottom: 1px solid #246EB9;
 }
 
@@ -62,22 +62,24 @@ div.avatar > img{
   width:100%;
 }
 .side-nav.sticky{
-  top: 15px;
+  top: 0px;
   padding: -20px 0px 0px 0px;
   width: 300px;
   left: -35px;
 }
-.side-nav.sticky .side-item{
-  visibility: visible;
-  transition: top 0.5s ease-in;
-}
+
 .side-item{
   margin: 10px 0px;
   visibility: hidden;
   margin-left: 5px;
   padding-left: 10px;
   border-left: 4px solid transparent;
+
   user-select: none;    
+}
+.side-nav.sticky .side-item{
+  visibility: visible;
+  /* transition: top 0.5s ease-in; */
 }
 .bg{
   z-index: 20;
@@ -85,6 +87,7 @@ div.avatar > img{
 .side-item:hover{
   cursor: pointer;
   border-left: 4px solid #246EB9;
+  transition: 200ms border ease-in;
 }
 .social-wrap
 {
@@ -120,24 +123,44 @@ div.avatar > img{
 */
 
 @media screen and (max-width: 600px) {
-  .side-nav{
-    display:none;
-  }
   .side-nav.sticky{
-    top: 35px;
+    top: 0px;
     padding: 20px 0px 0px 40px;
-
+    margin:0;
     display:initial;
+    text-align: right;
+    background: rgba(243, 252, 253,0.8);
+    text-align: center;
+    width: 100%;
   }
+  
   div.avatar{
     height: 120px;
     width: 120px;
     margin: 0px 180px 150px 0px;
 
   }
-  .narrow{
-    /* margin: 0px 0px 0px 150px; */
+  .portfolio-page .narrow {
+    padding-left: 10px;
+    padding-top: 100px;
     transition: left 750ms ease-out;
+  }
+  #rr{
+    font-size: 0.8em;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding: 1px;
+    border-bottom: 1px solid #333;
+  }
+  .portfolio-page .narrow {
+    padding-left: 10px;
+    padding-top: 100px;
+    transition: left 750ms ease-out;
+  }
+  .small-space{
+    margin: 0px 10px;
+    width: unset;
+    height: unset;
   }
   .myname span{
     top: 0px;
@@ -168,11 +191,28 @@ div.avatar > img{
     background: #eeeeee;
   }
   .side-nav.sticky{
-    top: 15px;
+    padding: 20px 0px;
+    left: unset;
     width: 100%;
   }
   .side-item{
     color: #246EB9;
+  }
+  .side-item{
+    margin: 10px 0px;
+    visibility: hidden;
+    margin-left: 5px;
+    padding-left: 10px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid transparent;
+  }
+  .side-item:hover{
+    cursor: pointer;
+    border-left: 4px solid transparent;
+
+    border-bottom: 4px solid #246EB9;
+    transition: 200ms border ease-in;
   }
   .side-item:hover{
     color: #333;
