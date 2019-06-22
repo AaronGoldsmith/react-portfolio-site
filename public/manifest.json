@@ -14,8 +14,8 @@
       "purpose": "badge"
     }
   ],
-  "start_url": "../public/index.html",
-  "scope": "../public/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#E86F2E",
   "background_color": "#3483E3"

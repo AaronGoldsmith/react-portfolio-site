@@ -25,7 +25,7 @@
   top: -10px;
   font-size: 2em;
 }
-.card-header h2{
+.card-header h3{
   display:inline-flex;
   margin-right: 20px;
 }
@@ -52,19 +52,17 @@
   display:flow-root;
   font-size: 1.1em;
   padding-right: 4px;
+  max-height: 200px;
 }
 .small{
   font-size: 12px;
 }
 #rr{
-  right: 100px;
-  position:absolute;
   font-size: 0.8em;
-  margin-right: 70px;
+  /* margin-right: 70px; */
+  margin-top: 60px;
   padding: 1px;
   border-bottom: 1px solid #333;
-  /* width:100%; */
-  bottom: 8px;
 }
 #rr ul{
   display:flex;
@@ -86,7 +84,7 @@
   width: 80%;
   height: auto;
   padding: 25px 25px 50px 25px;
-  display: flex;
+  /* display: flex; */
   margin: 0px auto;
   background: #eeeeee;
   box-shadow: 0px 0px 50px 15px #333;

@@ -49,9 +49,8 @@ nav{
 .pagination{
 	padding: 5px;
   text-align: center;
-  position: relative;
-  bottom: 20px;
   border-radius: 5%;
+  z-index: 0;
 }
  @media screen and (max-width: 600px) {
   nav#navbar{

@@ -65,9 +65,11 @@ p,a,div{
 }
 
 #sy{
-  margin-top: 150px;
+  /* margin-top: 150px;
   margin-bottom: 150px;
-  padding-bottom: 50px;
+  margin-left: calc(50% - 140px); */
+  /* margin: 0px auto; */
+  padding-bottom: 100px;
 }
 .inactive {
   display:none;
@@ -75,7 +77,7 @@ p,a,div{
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -94,3 +96,19 @@ code {
   border: 2px solid #BF4E30;
 }
 
+
+.narrow section{
+  display:inline-grid;
+  width:100%;
+}
+.narrow .card{
+  margin: 0;
+}
+@media screen and (max-width: 1400px) {
+  .narrow .section{
+    width: 100%;
+  }
+  #sy{
+    margin: 0px auto;
+  }
+}

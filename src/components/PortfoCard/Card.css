@@ -1,10 +1,8 @@
 .card {
   position: relative;
-  /* display: flex; */
-  /* flex-direction: column; */
   word-wrap: break-word;
-  width: 500px;
-  height: 450px;
+  width: 400px;
+  height: 300px;
   border-radius: 0.25rem;
   padding: 25px;
 }
@@ -12,21 +10,30 @@
   background-color: rgba(248, 248, 248, 0.714) ;
   background-clip: border-box;
   border: 3px solid rgb(214, 221, 219);
-  box-shadow: 0px 0px 30px 5px #333;
+
+  box-shadow: 0px 0px 7px 5px #333333aa;
 }
 .card-title{
-  margin: 32px auto 58px auto;
+  margin: 32px auto;
   font-size: 2em;
-  font-family: 'Krub', sans-serif;
+  font-family:'Trebuchet MS', sans-serif;
 }
 .card-content{
-  padding: 0px 60px;
-  min-height: 250px;
+  padding: 0px 20px;
+  max-height: 230px;
+  text-align: center;
+  width: 300px;
+  margin: 0px auto;
+  overflow: scroll;
   font-size: 1.3em;
-  text-justify: auto;
-  text-align: justify;
   font-family: 'Open Sans', sans-serif;
   line-height: 32px;
+}
+.anchorBottom{
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
 }
 @media screen and (min-width:1100px){
   .card{margin: 10px 300px 10px 50px;}

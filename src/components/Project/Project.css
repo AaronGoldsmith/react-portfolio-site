@@ -7,7 +7,7 @@
   margin: 80px 0px;
 }
 .small-space{
-  min-width: 50px;
+  width: 100px;
   height: 160px;
   margin: 30px 50px;
 }
@@ -70,7 +70,6 @@
   left: -12px;
 }
 #named{
-  max-width:80px;
   height: 40px;
   margin: 20px auto;
   text-align: center;

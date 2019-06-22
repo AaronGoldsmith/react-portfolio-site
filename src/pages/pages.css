@@ -20,7 +20,6 @@ div.avatar > img{
   margin-left: -20px;
 }
 .myname{
-  width: 220px;
   font-size: 2.2em;
   text-shadow: -1px 0px 1px #D9E0E0;
   font-family:'Trebuchet MS', sans-serif;
@@ -31,20 +30,22 @@ div.avatar > img{
 .flexy{
   display: inline-flex;
   flex-wrap: wrap;
-}
-.narrow{
-  margin: 0px 0px 0px 250px;
-  padding: 20px;
-}
-.flexy{
   padding-bottom: 50px;
 }
+.table{
+  display: inline-table;
+}
+.portfolio-page .narrow {
+  padding-left: 200px;
+}
+.narrow{
+  padding: 20px;
+}
+
 .narrow:not(:last-child){
   border-bottom: 1px solid #246EB9;
 }
-.cat-title{
-  font-family:'Trebuchet MS', sans-serif;
-}
+
 .pagination{
   margin: 0px auto;
   display: inherit;
@@ -87,7 +88,7 @@ div.avatar > img{
 }
 .social-wrap
 {
-  position:absolute;
+  /* position:absolute; */
   display: flex;
   padding: 0px;
   width: 100%;
@@ -95,7 +96,7 @@ div.avatar > img{
   font-size: 0.6em;
   float:left;
   top: 0px;
-  right: 40px;
+  right: 25px;
 }
 .social-wrap .fas,
 .social-wrap .fab{
@@ -108,26 +109,15 @@ div.avatar > img{
 
 .online-links{
   position: absolute;
-  right: -25px;
+  right: 25px;
   top: 15px;
 }
-@media screen and (min-width: 800px) {
-  .fa-caret-right,.fa-caret-left{
-    top: 50%;
-  }
-}
+/* .online-links
 
-
-@media screen and (max-width: 800px) {
-  .myname{
-    margin-left: 0px;
-  }
-  .narrow{
-    margin: 0px 0px 0px 200px;
-    transition: all 750ms ease-out;
-  }
- 
-}
+    position: absolute;
+    right: 25px;
+    top: 15px;
+*/
 
 @media screen and (max-width: 600px) {
   .side-nav{
@@ -146,7 +136,7 @@ div.avatar > img{
 
   }
   .narrow{
-    margin: 0px 0px 0px 150px;
+    /* margin: 0px 0px 0px 150px; */
     transition: left 750ms ease-out;
   }
   .myname span{
@@ -156,6 +146,9 @@ div.avatar > img{
     top: -290px;
     left: 100px;
   }
+}
+#profileImg{
+  -webkit-user-drag: none;
 }
 
 /* smallest window */
@@ -174,10 +167,6 @@ div.avatar > img{
   .side-nav{
     background: #eeeeee;
   }
-  .narrow{
-    margin: 0px;
-    transition: all 0.5s ease-out;
-  }
   .side-nav.sticky{
     top: 15px;
     width: 100%;
@@ -194,13 +183,21 @@ div.avatar > img{
   }
  
 }
-
+@media screen and (min-width: 1500px) {
+    #page2{
+    text-align: center;
+  }
+}
+#page2 nav{
+  text-align: left;
+}
 
 i.fa-caret-right,i.fa-caret-left{
   color: rgba(0, 0, 0, 0.26);
   font-size: 2em;
   position: absolute;
   bottom: 15px;
+  z-index: 1;
 }
 i.fa-caret-right{
   right: 20px;

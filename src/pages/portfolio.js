@@ -8,7 +8,7 @@ class Portfolio extends React.Component{
     selected: undefined
   }
   getProject = () =>{
-    console.log('trying to find ' + this.state.selected)
+    // console.log('trying to find ' + this.state.selected)
     return this.state.projects.find(p => p.pname===this.state.selected)
   }
   getDescription = () => {
@@ -70,7 +70,7 @@ class Portfolio extends React.Component{
         {pname: "",keywords:[''], pgit: "", pweb: "https://agoldsmith.exposure.co/", pcat: 4, imgSrc: `/assets/photography/IMG_01.jpg`,type:"photo"},
       ],
       sections: [
-        {title:"Web Dev/CLI Apps", description: "These items were projects or assignments I submitted while attending the UC Berkeley Boot camp", cat: 1},
+        {title:"Development Projects", description: "These items were projects or assignments I submitted while attending the UC Berkeley Boot camp", cat: 1},
         {title:"Computer Science", description:"These are a variety of assignments, labs, and projects that I've worked on", cat: 2},
         {title:"University Papers", description: "These are various papers I wrote at Santa Clara University over the course of 4 years", cat: 3},
         {title:"Digital Photography", description: "Original Photography By Aaron Goldsmith", cat: 4}
@@ -78,11 +78,11 @@ class Portfolio extends React.Component{
     })
   }
   render (){
+    const PHOTO = "Digital Photography"
     return (
     <div className="portfolio-page" id="page2" >
       <nav aria-labelledby='side navigation'>
         <ul className='side-nav' id='side'>
-        <span> &nbsp;Portfolio</span>
           {
             // side-navigation
             this.state.sections.map((category,i) => (
@@ -108,7 +108,7 @@ class Portfolio extends React.Component{
             <h1 className="cat-title">{category.title}</h1>
             <h3 className="cat-title">{category.description}</h3>
 
-            <div className="flexy">
+            <div className={`${category.title !== PHOTO ? "flexy" : "table"}`}>
               {this.state.projects.map((proj,i) => (
                 proj.pcat === category.cat?
                 <Project key={i} project={proj} clickHandler={this.handleClick} />:''
@@ -120,7 +120,8 @@ class Portfolio extends React.Component{
         
         )
       }
-      <p className='centered'>{'View more photos at https://agoldsmith.exposure.co'}</p>
+      <p className='centered'>This website is work of Aaron Goldsmith</p>
+      <small>Site development ongoing. Last deployment: <em>6/21/2019</em></small>
 
     </div>
   );

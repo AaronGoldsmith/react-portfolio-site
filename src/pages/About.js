@@ -14,6 +14,9 @@ import "./pages.css"
      var regex = /(.+)[\]][\(](.+)[\)]/
      return str1.replace(regex, '$1|$2').split('|')
    }
+
+   // return an array of n integers
+   // from 0 to n01
    linArr = (n) => {
       let arr = [];
       for(var i = 0;i<n;i++){
@@ -98,7 +101,7 @@ import "./pages.css"
   render(){
     return (
     <div id="page2">
-      <nav aria-labelledby='side navigation'>
+      {/* <nav aria-labelledby='side navigation'>
         <ul className='side-nav' id='side'>
         <span> &nbsp;<em>Introduction</em> </span>
           {this.state.cards.map((card,i) => (
@@ -106,7 +109,7 @@ import "./pages.css"
             <li className="side-item"><em>{card.title}</em></li>
             </a>))}
       </ul>
-     </nav>
+     </nav> */}
     <div className = "narrow">
       {this.state.cards.map((card,i) => (
         <section key={'intro-'+i} id={'intro-'+(i+1)}>
@@ -135,8 +138,10 @@ import "./pages.css"
                 }
            </CardContent>
            <Pagination className="align-center" 
-                       selected={card.index} 
-                       size={this.linArr(card.slides)}/>
+                       active={card.index} 
+                       size={card.slides}
+                      //  size={this.linArr(card.slides)}
+                      />
           
          </Card>
       </section>
