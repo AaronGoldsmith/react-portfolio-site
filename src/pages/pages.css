@@ -162,13 +162,13 @@ div.avatar > img{
     width: unset;
     height: unset;
   }
-  .myname span{
-    top: 0px;
-    display:inline-block;
-    position: relative;
+  /* .myname span{ */
+    /* top: 0px; */
+    /* display:inline-block; */
+    /* position: relative;
     top: -290px;
-    left: 100px;
-  }
+    left: 100px; */
+  /* } */
 }
 #profileImg{
   -webkit-user-drag: none;
