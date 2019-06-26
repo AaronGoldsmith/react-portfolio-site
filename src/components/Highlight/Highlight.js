@@ -1,11 +1,13 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 import "./Highlight.css"
-import {Icon} from "../FA/Icon";
+import PropTypes from "prop-types"
+import Icon from "../FA/Icon";
 import {IconLink} from "../FA/IconLink";
 
 export const Highlight = ({Project,clickHandler,description}) => (
   <div className="Highlight">
-      <div>
         <h2 id="close" onClick={clickHandler} className="rightX"><Icon type="times"/></h2>
         
       
@@ -37,10 +39,13 @@ export const Highlight = ({Project,clickHandler,description}) => (
           <p>{description}</p>
         </div>
   
-            </div>
-      </div>
-      
+            </div>      
       
   </div>
 
 );
+Highlight.propTypes = {
+  Project: PropTypes.object,
+  clickHandler: PropTypes.func,
+  description: PropTypes.string.isRequired
+}

@@ -8,7 +8,7 @@ const PageNode = ({selected}) => (
 const PageNodeItems = ({n, index}) => {
     // let pageNodeList = []
     const arr = new Array(n).fill(0)
-    return arr.map( (_, i) => <PageNode selected={index === i} />) ;
+    return arr.map( (_, i) => <PageNode key={i} selected={index === i} />) ;
 }
 
 

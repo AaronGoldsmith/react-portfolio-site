@@ -2,6 +2,11 @@ nav{
   display:flex;
   margin: 50px auto;
 }
+.navigation{
+  display: unset;
+  margin: 0;
+  text-align: center;
+}
  .nav-tab{
     font-size: 1.2em;
     text-shadow: -1px 0px 1px #D9E0E0;

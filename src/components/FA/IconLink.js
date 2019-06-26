@@ -1,12 +1,16 @@
 import React from "react"
-import {Icon} from "./Icon"
+import PropTypes from "prop-types"
+import Icon from "./Icon"
 import {Brand} from "./Brand"
-import "./FA.css"
-export const IconLink = (props) => (
+import "./FAb.css"
+export const IconLink = ({brand,type,...props}) => {
+  return (
     <a href={props.to} target="_self">
-    {props.type !== "brand"?
-      <Icon type={props.type} />:
-      <Brand type={props.brand} />
-    }
-  </a>
-);
+     {brand ? <Brand brand={brand} /> : <Icon type={type} />}
+    </a>)
+};
+IconLink.propTypes = {
+  type: PropTypes.func,
+  brand: PropTypes.string,
+  to: PropTypes.string.isRequired
+}

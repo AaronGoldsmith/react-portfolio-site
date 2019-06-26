@@ -1,6 +1,7 @@
 html{
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 section{
   padding-top: 50px;
@@ -10,10 +11,9 @@ section{
   text-align: center;
 }
 .App-header {
-
-  background-image: linear-gradient(to top, rgba(43,114,229,0.6), rgba(43,114,229,0.6),rgb(201, 248, 223));
+  background-image: repeating-linear-gradient(to bottom left, #009688,#1183F9);
+  /* background-image: linear-gradient(to top, rgba(43,114,229,0.6), rgba(43,114,229,0.6),rgb(201, 248, 223)); */
   min-height: 80vh;
-  /* stop-opacity: 0.5; */
   display: flex;
   padding-top: 60px;
   flex-direction: column;
@@ -22,14 +22,6 @@ section{
   font-size: calc(10px + 2vmin);
   color: #262730d8;
   border-bottom: 7px solid #E86F2E;
-}
-.bg:before{
-  /* background-image: cross-fade('./strips.png') */
-}
-.bg{
-  /* background: url('./stripes.png') repeat; */
-  background-size: contain;
-  transition: opacity 1s ease-in;
 }
 
 a ,a:active,a:visited {
@@ -63,23 +55,20 @@ a ,a:active,a:visited {
   color: white;
 }
 h1,h2,h3,h4{
-  font-family: 'Krub', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 p,a,div{
   font-family: 'Open+Sans', sans-serif;
 }
 
-#sy{
-  text-align: center;
-  padding-bottom: 100px;
-}
+
 .inactive {
   display:none;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", "Roboto", "Oxygen",    sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 code {
@@ -95,19 +84,31 @@ code {
   border: 2px solid #BF4E30;
 }
 
-
-.narrow section{
-  display:inline-grid;
-  width:100%;
+.narrow{
+  overflow-x: scroll;
+  margin:0px auto;
+  display:inline-flex;
 }
+.portfolio-page .narrow{
+  overflow:none;
+  display: grid;
+  width: 70%;
+}
+
 .narrow .card{
   margin: 0;
 }
+
 @media screen and (max-width: 1400px) {
   .narrow .section{
     width: 100%;
   }
   #sy{
     margin: 0px auto;
+  }
+}
+@media screen and (max-width: 600px){
+  .narrow{
+    display: unset
   }
 }

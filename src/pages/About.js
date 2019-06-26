@@ -1,53 +1,55 @@
 import React from 'react';
-import {Card,CardContent} from "../components/PortfoCard/"
-import {Pagination} from "../components/Nav/"
+import { Card, CardContent } from "../components/PortfoCard/"
+import { Pagination } from "../components/Nav/"
 import "./pages.css"
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 // eslint-disable-next-line
- const regex = /[\[](.+)[\]][\(](.+)[\)]/;
- class About extends React.Component {
-   state = {
-      cards: [],
-   }
-   findandTransform(str){
-     var str1 = str.split('[')[1]
-     // eslint-disable-next-line
-     var regex = /(.+)[\]][\(](.+)[\)]/
-     return str1.replace(regex, '$1|$2').split('|')
-   }
-
-   // return an array of n integers
-   // from 0 to n01
-   linArr = (n) => {
-      let arr = [];
-      for(var i = 0;i<n;i++){
-        arr.push(i);
-      }
-      return arr;
+const regex = /[\[](.+)[\]][\(](.+)[\)]/;
+class About extends React.Component {
+  state = {
+    cards: [],
   }
-   handleCardChange = (cardBtn) => {
-     let cardID = cardBtn.target.id
-     let current = this.state.cards;
-     let dir = cardBtn.target.className.split('-')[2];
+  findandTransform(str) {
+    var str1 = str.split('[')[1]
+    // eslint-disable-next-line
+    var regex = /(.+)[\]][\(](.+)[\)]/
+    return str1.replace(regex, '$1|$2').split('|')
+  }
 
-     // select left or right arrow
-     if(dir === 'right'){
-       if(current[cardID].index >= (current[cardID].slides))
+  // return an array of n integers
+  // from 0 to n01
+  linArr = (n) => {
+    let arr = [];
+    for (var i = 0; i < n; i++) {
+      arr.push(i);
+    }
+    return arr;
+  }
+  handleCardChange = (cardBtn) => {
+    let cardID = cardBtn.target.id
+    let current = this.state.cards;
+    let dir = cardBtn.target.className.split('-')[2];
+
+    // select left or right arrow
+    if (dir === 'right') {
+      if (current[cardID].index >= (current[cardID].slides))
         current[cardID].index = 0;
-       else
+      else
         current[cardID].index++;
-     }
-     else if(current[cardID].index >=0 )
-     {
-        current[cardID].index--;
-     }
-     this.setState({cards:current})
-   }
-   componentDidMount() {
-     this.setState({
+    }
+    else if (current[cardID].index >= 0) {
+      current[cardID].index--;
+    }
+    this.setState({ cards: current })
+  }
+  componentDidMount() {
+    this.setState({
       cards: [
         {
           id: 1,
-          title: 'Get to know Aaron',
+          title: 'Meet Aaron',
           index: 0,
           slides: 3,
           content: [
@@ -58,10 +60,10 @@ import "./pages.css"
         },
         {
           id: 2,
-          title:'His Education',
+          title: 'His Education',
           index: 0,
           slides: 4,
-          content:[
+          content: [
             ' Aaron earned his degree in Computer Science from Santa Clara University in June, 2018.',
             ' This past summer, he attended a three month long Coding Boot Camp to gain experience working with a full stack, and establish a portfolio',
             ' He loves to design, build, and create tools and software that can be used and enjoyed by others. Technology has become the fabric through which people around the world connect and share ideas.',
@@ -70,10 +72,10 @@ import "./pages.css"
         },
         {
           id: 3,
-          title:'Trusted & Responsible',
+          title: 'Trusted & Responsible',
           index: 0,
           slides: 3,
-          content:[
+          content: [
             ' Aaron first began a leadership role while attending High School at Head-Royce. He applied for a position on the school honor council and was accepted along with a number of students throughout the four grades.',
             ' The Honor Council was created on behalf of the students so that administrators could have student insight on relevant issues coming to the upper school head of school.',
             ' Additionally, Aaron sat on the Judicial Board of his fraternity (Kappa Sigma) for three years while attending Santa Clara University. The Judicial board is an essential part of the fraternity because it enforces the rules that were created to keep us safe by administering disciplinary consequences to those who break the rules or guidelines.',
@@ -81,75 +83,65 @@ import "./pages.css"
         },
         {
           id: 4,
-          title:'Work Experiences',
+          title: 'Work Experiences',
           index: 0,
-          slides: 5,
-          content:[
-              'In 2014, The Head-Royce School administration asked several students to build a resource database for the school to use.',
-              'A group of students, including Aaron, built the first version of the website in Drupal, and it has since gone through various iterations as current students continue to modify and upkeep the site:\n\n[https://hrsinstitute.github.io/theOH/theoh.html](HRS) ',
-              'Aaron worked at iD Tech Camps - Stanford for two summers in college. In Dec. 2016 Aaron began teaching students to code with [https://breakoutmentors.com](Breakout Mentors).',
-              'Aaron taught students how to code first in Scratch, and then in Java, Javascript, or Python. ',
-              'In 2017 Aaron was an intern with the tech department at Bay Medical Management, LLC. He was responsible for creating HTML report templates, and developing an HL7 interface to bring in historic reports from two managed hospitals'
-            ]
+          slides: 4,
+          content: [
+            'Most recently, Aaron finished a 6 month long contract at the Mountain View Startup – AllyO. As a Frontend Engineer, Aaron was responsible for implenting several features and deploying them production',
+            'Aaron worked at iD Tech Camps - Stanford for two summers in college. In Dec. 2016 Aaron began teaching students to code with [https://breakoutmentors.com](Breakout Mentors).',
+            'Aaron taught students how to code first in Scratch, and then in Java, Javascript, and Python. ',
+            'In 2017 Aaron was an intern with the tech department at Bay Medical Management, LLC. He was responsible for creating HTML report templates, and developing an HL7 interface to bring in historic reports from two managed hospitals'
+          ]
         }
       ]
 
 
 
-     })
-   }
-  render(){
+    })
+  }
+  render() {
     return (
-    <div id="page2">
-      {/* <nav aria-labelledby='side navigation'>
-        <ul className='side-nav' id='side'>
-        <span> &nbsp;<em>Introduction</em> </span>
-          {this.state.cards.map((card,i) => (
-            <a key={i} href={"#intro-"+(i+1)}>
-            <li className="side-item"><em>{card.title}</em></li>
-            </a>))}
-      </ul>
-     </nav> */}
-    <div className = "narrow">
-      {this.state.cards.map((card,i) => (
-        <section key={'intro-'+i} id={'intro-'+(i+1)}>
-        <Card title={card.title} key={card.title} >
-        {/* conditionally render left/right icons */}
-              {(card.index<card.slides-1?
-                <i onClick={this.handleCardChange} id={i} className="fa fa-caret-right"></i>:
-                <span></span>)}
-                
-                {(card.index>0?
-                <i onClick={this.handleCardChange} id={i} className="fa fa-caret-left"></i>:
-                <span></span>)
-            }
-            <CardContent>
-            {/* display card content  check for [url](title) */}
-            {
-              card.content[card.index].match(regex)?(
-                  <div>
-                    {card.content[card.index].split(regex)[0]}
-                     <a rel="noopener noreferrer" href ={this.findandTransform(card.content[card.index])[0]}>
-                      { this.findandTransform(card.content[card.index])[1]}
-                    </a>
-                  </div>):
-                  //  couldn't match regex, so show text
-                  card.content[card.index]
+      <div id="page2">
+        <div className="narrow">
+          {this.state.cards.map((card, i) => (
+            <section key={'intro-' + i} id={'intro-' + (i + 1)}>
+              <Card title={card.title} key={card.title} >
+                {/* conditionally render left/right icons */}
+                {(card.index < card.slides - 1 ?
+                  <i onClick={this.handleCardChange} id={i} className="fa fa-caret-right"></i> :
+                  <span></span>)}
+
+                {(card.index > 0 ?
+                  <i onClick={this.handleCardChange} id={i} className="fa fa-caret-left"></i> :
+                  <span></span>)
                 }
-           </CardContent>
-           <Pagination className="align-center" 
-                       active={card.index} 
-                       size={card.slides}
-                      //  size={this.linArr(card.slides)}
-                      />
-          
-         </Card>
-      </section>
+                <CardContent>
+                  {/* display card content  check for [url](title) */}
+                  {
+                    card.content[card.index].match(regex) ? (
+                      <div>
+                        {card.content[card.index].split(regex)[0]}
+                        <a rel="noopener noreferrer" href={this.findandTransform(card.content[card.index])[0]}>
+                          {this.findandTransform(card.content[card.index])[1]}
+                        </a>
+                      </div>) :
+                      //  couldn't match regex, so show text
+                      card.content[card.index]
+                  }
+                </CardContent>
+                <Pagination className="align-center"
+                  active={card.index}
+                  size={card.slides}
+                />
 
-    ))}
-    </div>
-    </div>
-  )}
+              </Card>
+            </section>
 
- }
- export default About;
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+}
+export default About;

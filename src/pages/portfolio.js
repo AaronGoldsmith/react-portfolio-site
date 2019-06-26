@@ -61,7 +61,7 @@ class Portfolio extends React.Component{
         {pname: "Python Networking", keywords:['talk.py','listen.py','diffiehellman'], pgit: "networking-labs", pweb: "https://aarongoldsmith.github.io/networking-labs/", pcat: 2, imgSrc: undefined, type: 'shell'},
         {pname: "CharStream Analysis", keywords:['generate','python','data'], pgit: "", pweb:"/assets/papers/CharStreamAnalysis.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
         {pname: "Bandwith Analysis", keywords:['lab','analysis','bandwith'], pgit: "", pweb: "/assets/papers/NetworkAnalysis.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
-        {pname: "Graph Functions", keywords:['canvas','transformations','graphics'], pgit: "transformations", pweb: "https://aarongoldsmith.github.io/transformations", pcat: 2, imgSrc: undefined, type: 'webApp'},
+        {pname: "Graph Functions", keywords:['canvas','transformations','graphics'], pgit: "transformations", pweb: "https://aarongoldsmith.github.io/transformations/", pcat: 2, imgSrc: undefined, type: 'webApp'},
         {pname: "Force Engine", keywords:['canvas','forces','graphics'], pgit: "ForceEngine", pweb: "https://aarongoldsmith.github.io/ForceEngine", pcat: 2, imgSrc: "/assets/images/forces.png", type: 'webApp'},
         {pname: "Game of Life", keywords:['game','gol','conway'], pgit: "game-of-life", pweb: "https://aarongoldsmith.github.io/game-of-life", pcat: 2, imgSrc: '/assets/images/gol.png', type: 'webApp'},
         {pname: "Multiplexer Lab", keywords:['Logic Design','COEN'], pgit: "", pweb: "/assets/papers/Multiplexer1.pdf", pcat: 2, imgSrc: undefined, type: 'doc'},
@@ -71,8 +71,8 @@ class Portfolio extends React.Component{
       ],
       sections: [
         {title:"Development Projects", description: "These items were projects or assignments I submitted while attending the UC Berkeley Boot camp", cat: 1},
-        {title:"Computer Science", description:"These are a variety of assignments, labs, and projects that I've worked on", cat: 2},
-        {title:"University Papers", description: "These are various papers I wrote at Santa Clara University over the course of 4 years", cat: 3},
+        {title:"Computer Science", description:"Variety of assignments, labs, and projects that I've worked on", cat: 2},
+        {title:"University Papers", description: "These are various papers I wrote while attending Santa Clara University", cat: 3},
         // {title:"Digital Photography", description: "Original Photography By Aaron Goldsmith", cat: 4}
       ]
     })
@@ -121,7 +121,7 @@ class Portfolio extends React.Component{
         )
       }
       <p className='centered'>This website is work of Aaron Goldsmith</p>
-      <p className="centered">Site development ongoing. Last deployment: <em>6/21/2019</em></p>
+      <p className="centered">Site development ongoing. Last deployment: <em>6/24/2019</em></p>
 
     </div>
   );

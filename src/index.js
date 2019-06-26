@@ -5,6 +5,6 @@ import App from './App';
 
 import * as serviceWorker from './serviceWorker';
 
-serviceWorker.register()
+serviceWorker.unregister()
 ReactDOM.render(<App />, document.getElementById('root'));
 

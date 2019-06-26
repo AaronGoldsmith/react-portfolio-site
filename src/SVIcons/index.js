@@ -1,3 +1,5 @@
 export * from './CodeSV.js'
 export * from './SheetSV.js'
 export * from './ShellSV.js'
+export * from './info.js'
+export * from './PlusMinus.js'
