@@ -7,8 +7,13 @@ import { IconLink } from "../FA/IconLink"
 import { SheetSV, ShellSV, CodeSV } from "../../SVIcons"
 import "./Project.css"
 
+//  check for 'https' --> orig repo
+//  if string not found, link to my github
+function formatForGH(project) {
+    return project.pgit.substring(0, 5) !== 'https' ? `https://github.com/AaronGoldsmith/${project.pgit}` : `${project.pgit}`
+}
 export const Project = ({ project, ...props }) => (
-    <div onClick={()=>{}} onKeyUp={props.clickHandler} alt={project.pname} className={project.type === "photo" ? "spacing" : "small-space"} role="region">
+    <div onClick={() => { }} onKeyUp={props.clickHandler} alt={project.pname} className={project.type === "photo" ? "spacing" : "small-space"} role="region">
         <div className="project" onClick={props.clickHandler} >
             <div className={`img-wrap ${project.type}`}><div className={project.type === "photo" ? 'img' : "media"}>
                 {project.imgSrc ?
@@ -21,11 +26,7 @@ export const Project = ({ project, ...props }) => (
                 <div id="links">
                     {/* when user hovers over project, reveal links */}
                     {/* to only allow the images to link: !project.imgSrc */}
-                    {project.pgit.length > 1 ? <IconLink to={
-                        //  check for 'https' --> orig repo
-                        //  if string not found, link to my github
-                        project.pgit.substring(0, 5) !== 'https' ? "https://github.com/AaronGoldsmith/" + project.pgit :
-                            project.pgit} brand={'github'} type="brand" /> : ''
+                    {project.pgit.length > 1 ? <IconLink to={formatForGH(project)} brand={'github'} type="brand" /> : ''
                     }
                     {project.pweb.length > 0 ? <IconLink to={project.pweb} type="external-link-alt" /> : ''}
 
@@ -36,7 +37,7 @@ export const Project = ({ project, ...props }) => (
 
         <div>
             {/*  seo  */}
-            <i hidden><em>{project.keywords.join(', ')}</em></i>
+            <i aria-hidden="true" hidden><h4>{project.keywords.join(', ')}</h4></i>
         </div>
 
     </div>

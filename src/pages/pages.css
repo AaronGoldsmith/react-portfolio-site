@@ -37,9 +37,7 @@ div.avatar > img{
   display: inline-flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: rgba(0,0,0,0.08);
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 4px;
   padding: 50px;
   margin: 0px auto;
   box-sizing: border-box;
@@ -148,7 +146,7 @@ div.avatar > img{
   div.avatar{
     height: 120px;
     width: 120px;
-    margin: 0px 180px 150px 0px;
+    /* margin: 0px 180px 150px 0px; */
 
   }
   .portfolio-page .narrow {
@@ -172,9 +170,9 @@ div.avatar > img{
    
   }
   .flexy{
-    background: rgba(0,0,0,0.08);
+    /* background: rgba(0,0,0,0.08); */
     border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.26);
+    /* border: 1px solid rgba(0, 0, 0, 0.26); */
     padding: 0px;
     text-align: left;
     margin: 0px auto;

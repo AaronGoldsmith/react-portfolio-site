@@ -59,9 +59,11 @@ nav{
 }
  @media screen and (max-width: 600px) {
   nav#navbar{
-    margin-top: -250px;
-    width: 400px;
     flex-direction: column;
+    text-align: center;
+  }.navigation{
+    display: flex;
+    margin: 0;
     text-align: center;
   }
 

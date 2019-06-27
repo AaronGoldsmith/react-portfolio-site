@@ -97,7 +97,7 @@ class Home extends Component {
               <img src={Portrait} alt='Aaron Goldsmith' id="profileImg"></img>
             </div>
             <h2 className="text-center myname fadeSlow">
-              <span id="first">Aaron </span><br /><span id="last">Goldsmith</span>
+              <span id="name">Aaron Goldsmith</span>
             </h2>
 
             <Navtabs id="navigation" handleClick={this.handleClick} />

@@ -87,7 +87,7 @@ class About extends React.Component {
           index: 0,
           slides: 4,
           content: [
-            'Most recently, Aaron finished a 6 month long contract at the Mountain View Startup – AllyO. As a Frontend Engineer, Aaron was responsible for implenting several features and deploying them production',
+            'Aaron recently finished a 6 month long contract with a Startup based in Mountain View – AllyO. As a Frontend Engineer, Aaron was responsible for implenting several features and deploying them production',
             'Aaron worked at iD Tech Camps - Stanford for two summers in college. In Dec. 2016 Aaron began teaching students to code with [https://breakoutmentors.com](Breakout Mentors).',
             'Aaron taught students how to code first in Scratch, and then in Java, Javascript, and Python. ',
             'In 2017 Aaron was an intern with the tech department at Bay Medical Management, LLC. He was responsible for creating HTML report templates, and developing an HL7 interface to bring in historic reports from two managed hospitals'

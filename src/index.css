@@ -109,6 +109,17 @@ code {
 }
 @media screen and (max-width: 600px){
   .narrow{
-    display: unset
+    display: unset;
+    padding: unset;
   }
+  .App-header::before{
+    min-height: 80vh;
+    min-height: 82vh;
+    display:unset;
+  }
+  .App-header{
+    display:block;
+    justify-content: unset;
+  }
+
 }
