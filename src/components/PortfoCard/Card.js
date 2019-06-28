@@ -1,20 +1,11 @@
-import React, { useState,useEffect,useRef } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types"
 import PlusMinus from "../../SVIcons/PlusMinus"
 import "./Card.css"
 
-function getSize(ref){
-  return ref.scrollHeight;
-}
 export function CardContent({ children }){
-const textWrap = useRef(null)
-
-  useEffect(()=>{
-    console.log(getSize(textWrap))
-  })
-
   return (
-  <div className="card-content" ref={textWrap} >
+  <div className="card-content" >
     {children}
   </div>)
 
@@ -40,7 +31,7 @@ export const Card = ({title, children}) => {
           
           {children}
         </ExpandedView> 
-        {/* <div className='card-footer' /> */}
+        <div className='card-footer' />
       </div>)
 
 }

@@ -18,10 +18,9 @@ function getIcons(project){
     <div id="links">
     {/* when user hovers over project, reveal links */}
     {/* to only allow the images to link: !project.imgSrc */}
-    {project.pgit.length > 1 ? <IconLink to={formatForGH(project)} brand={'github'} type="brand" /> : ''
+    {project.pgit.length > 1 &&
+            <IconLink to={formatForGH(project)} brand={'github'} type="brand" /> 
     }
-    {project.pweb.length > 0 ? <IconLink to={project.pweb} type="external-link-alt" /> : ''}
-
     </div>)
 }
 export const Project = ({ project, ...props }) => (
@@ -37,7 +36,7 @@ export const Project = ({ project, ...props }) => (
             </div>
    
         </div>
-        <h3 id="named"  >  {project.pname} </h3>
+            <h3 id="named"  > {project.pweb && <a href={project.pweb}>{project.pname} </a>} </h3>
 
         <div>
             {getIcons(project)}

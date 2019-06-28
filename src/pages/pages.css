@@ -128,11 +128,10 @@ div.avatar > img{
 @media screen and (max-width: 600px) {
   .side-nav.sticky{
     top: 0px;
-    padding: 20px 0px 0px 40px;
     margin:0;
     display:initial;
     text-align: right;
-    background: rgba(243, 252, 253,0.8);
+    background: rgb(243, 252, 253);
     text-align: center;
     width: 100%;
   }
@@ -176,7 +175,7 @@ div.avatar > img{
     height: unset;
   }
   .flexy > div{
-    padding: 20px;
+    padding: 0px 20px;
     display: block;
     text-align: left;
     margin: 5px;
@@ -201,9 +200,10 @@ div.avatar > img{
   .avatar{
     padding-bottom: 50px;
   }
-
+  #side a{
+    padding: 0px 10px;
+  }
   .side-nav.sticky{
-    padding: 20px 0px;
     left: unset;
     width: 100%;
   }

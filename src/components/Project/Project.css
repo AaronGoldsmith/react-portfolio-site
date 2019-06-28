@@ -26,19 +26,18 @@
 
 }
 #links{
-   margin: 6px 0px;
   opacity: 0;
-  width:100%;
+  /* width: 20%; */
+  margin: 0px auto;  
 }
 #links a:first-child{
-  /* float:left; */
-  /* position: absolute; */
-  bottom: 0;
-  right:20px;
+  float:left; 
+  padding: 0px 10px;
 }
 #links a:last-child{
-  margin:0px auto;
-  /* float:right; */
+  float:right;
+  padding: 0px 10px;
+
 }
 .img .activated{
 /* .activated{ */
@@ -53,8 +52,9 @@
 .project-img{
   object-fit: cover;
   min-height: 100%;
-  max-width: 100%;
+  max-width: 52%;
   box-shadow: 0px 0px 10px 2px #33333379;
+
 }
 .project{
   font-size: 16px;
@@ -68,6 +68,8 @@
   opacity: 0.8;
   transition: 100ms opacity ease-in;
   transition-delay: 50ms;
+
+  
 }
 .project .fas:hover,
 .project .fab:hover{
@@ -109,6 +111,9 @@
   white-space: nowrap;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
+}
+#named a{
+  padding: 0px 2px;
 }
 .media a{
   color: #333;
@@ -170,6 +175,10 @@
     white-space: nowrap;
     overflow: hidden;
     font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+  }
+  #named:hover{
+    text-decoration: underline;
   }
 
 

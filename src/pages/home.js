@@ -3,6 +3,7 @@ import About from "./About"
 import Portrait from "../agoldsmith.png"
 import Portfolio from "./portfolio"
 import { Navtabs } from "../components/Nav"
+import {IconLink} from "../components/FA/IconLink"
 import { Brand } from "../components/FA/Brand"
 import './pages.css';
 
@@ -37,17 +38,17 @@ class Home extends Component {
       else
         this.setState({ scrolledDown: true })
     }
-
-
-
   }
+
+
   handleChevron = () => {
     let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-
     if (scrollTop > 50) {
       window.scrollTo(0, 0)
     }
   }
+
+
   handleEnvelope = () => {
     var email = document.getElementById('contact-email');
     email.href = '';
@@ -62,6 +63,8 @@ class Home extends Component {
       this.setState({ opened: true })
     }
   }
+
+
   handleClick = (nav) => {
     this.setState({ page: nav.target.className.split(' ')[1] });
     setTimeout(function () {
@@ -70,6 +73,8 @@ class Home extends Component {
       if (el) window.scrollTo(0, height)
     }, 100);
   }
+
+
   componentDidMount() {
     this.setState({ scrolledDown: true })
     window.addEventListener('scroll', this.handleScroll);
@@ -89,8 +94,8 @@ class Home extends Component {
                 <a id='contact-email' title='agoldsmith@alumni.scu.edu' onMouseUp={this.handleEnvelope} rel="noopener no referrer" target='_blank' href="mailto:agoldsmith@alumni.scu.edu?body=Hey Aaron,%0D%0A">
                   <i className={`fas fa-envelope${this.state.opened ? '-open' : ''}`} />
                 </a>
-                <Brand to="https://github.com/AaronGoldsmith" brand="github" />
-                <Brand to="https://www.linkedin.com/in/aarongoldsmith-1" className="normal" brand="linkedin" />
+                <IconLink to="https://github.com/AaronGoldsmith" brand="github" />
+                <IconLink to="https://www.linkedin.com/in/aarongoldsmith-1" className="normal" brand="linkedin" />
               </div>
             </div>
             <div className="avatar fadeIn">
@@ -102,7 +107,7 @@ class Home extends Component {
 
             <Navtabs id="navigation" handleClick={this.handleClick} />
           </header>
-          {((!this.state.scrolledDown) ? <i aria-hidden="true" onClick={this.handleChevron} className="fas fa-chevron-up"></i> : <i></i>)}
+          {(!this.state.scrolledDown) ? <i aria-hidden="true" onClick={this.handleChevron} className="fas fa-chevron-up"></i> : <i></i>}
         </div>
 
         <div>
