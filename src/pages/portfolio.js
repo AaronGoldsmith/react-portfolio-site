@@ -120,8 +120,9 @@ class Portfolio extends React.Component{
         
         )
       }
+      <hr />
       <p className='centered'>This website is work of Aaron Goldsmith</p>
-      <p className="centered">Site development ongoing. Last deployment: <em>6/24/2019</em></p>
+      <p className="centered">Site development ongoing. Last deployment: <em>6/27/2019</em></p>
 
     </div>
   );

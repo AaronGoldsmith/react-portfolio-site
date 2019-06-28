@@ -88,12 +88,20 @@ code {
   overflow-x: scroll;
   margin:0px auto;
   display:inline-flex;
+  padding:50px 0px;
 }
+.narrow 
 .portfolio-page .narrow{
   overflow:none;
   display: grid;
   width: 70%;
 }
+
+#page2 section:last-of-type{
+  overflow-x: scroll;
+}
+
+
 
 .narrow .card{
   margin: 0;

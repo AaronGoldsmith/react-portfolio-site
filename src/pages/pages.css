@@ -29,6 +29,7 @@ div.avatar > img{
 }
 .icon{
   outline: 0;
+  cursor: pointer;
 }
 .icon:hover{
   color: #eee;
@@ -50,13 +51,6 @@ div.avatar > img{
   padding-left: 200px;
   padding-right: 180px;
 }
-.narrow{
-  padding: 140px 20px;
-}
-
-/* .narrow:last-child{
-  border-bottom: 1px solid #246EB9;
-} */
 
 .pagination{
   margin: 0px auto;
@@ -97,11 +91,7 @@ div.avatar > img{
   width:100vw;
   overflow:overlay;
 }
-.side-item:hover{
-  cursor: pointer;
-  border-left: 4px solid #246EB9;
-  transition: 200ms border ease-in;
-}
+
 .social-wrap
 {
   /* position:absolute; */
@@ -130,6 +120,10 @@ div.avatar > img{
   right: 25px;
   top: 15px;
 }
+.portfolio-page section:first-of-type{
+  overflow-x: scroll;
+  padding: 100px 20px;
+}
 
 @media screen and (max-width: 600px) {
   .side-nav.sticky{
@@ -151,11 +145,12 @@ div.avatar > img{
   }
   .portfolio-page .narrow {
     padding-left: 10px;
-    padding-top: 100px;
+    padding-top: 90px;
     padding-right: 10px;
     width: unset;
     transition: left 750ms ease-out;
   }
+
   #rr{
     font-size: 0.8em;
     margin-right: 0px;
@@ -185,6 +180,7 @@ div.avatar > img{
     display: block;
     text-align: left;
     margin: 5px;
+    max-width: 200px;
   }
 
 }
@@ -193,11 +189,10 @@ div.avatar > img{
 }
 
 /* smallest window */
-@media screen and (max-width:450px){
+@media screen and (max-width:600px){
   .myname{
    width: 200px;
-   margin: 0px 30px;
-   /* text-align: left !important; */
+   margin: 0px auto;
   }
   .bg{
     overflow-x: hidden;
@@ -206,9 +201,7 @@ div.avatar > img{
   .avatar{
     padding-bottom: 50px;
   }
-  /* .side-nav{
-    background: #eeeeee;
-  } */
+
   .side-nav.sticky{
     padding: 20px 0px;
     left: unset;
@@ -216,25 +209,25 @@ div.avatar > img{
   }
   .side-item{
     color: #246EB9;
+    border-bottom: 4px solid transparent;
   }
   .side-item{
     margin: 10px 0px;
     visibility: hidden;
     margin-left: 5px;
-    padding-left: 10px;
+    padding-left: 0px;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 4px solid transparent;
+
   }
   .side-item:hover{
     cursor: pointer;
     border-left: 4px solid transparent;
+    color: #333;
 
     border-bottom: 4px solid #246EB9;
     transition: 200ms border ease-in;
-  }
-  .side-item:hover{
-    color: #333;
   }
   .fa-caret-right,.fa-caret-left{
     position: absolute;
@@ -243,20 +236,31 @@ div.avatar > img{
  
 }
 #page2{
-  width:100vw;
+  margin-top: 20px;
+  overflow: auto;
   min-height: 90vh;
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1000px) {
     #page2{
     text-align: center;
   }
+  .side-item{
+    padding-left: 10px;
+  }
+  .side-item:hover{
+    cursor: pointer;
+    border-left: 4px solid #246EB9;
+    transition: 200ms border ease-in;
+  }
 }
+
 #page2 nav{
   text-align: left;
   position: fixed;
   top: 0px;
   margin-top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 i.fa-caret-right,i.fa-caret-left{

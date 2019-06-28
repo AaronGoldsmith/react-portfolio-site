@@ -63,7 +63,7 @@ nav{
     text-align: center;
   }.navigation{
     display: flex;
-    margin: 0;
+    margin: 20px 0;
     text-align: center;
   }
 

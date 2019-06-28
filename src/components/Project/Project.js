@@ -12,6 +12,18 @@ import "./Project.css"
 function formatForGH(project) {
     return project.pgit.substring(0, 5) !== 'https' ? `https://github.com/AaronGoldsmith/${project.pgit}` : `${project.pgit}`
 }
+
+function getIcons(project){
+    return (
+    <div id="links">
+    {/* when user hovers over project, reveal links */}
+    {/* to only allow the images to link: !project.imgSrc */}
+    {project.pgit.length > 1 ? <IconLink to={formatForGH(project)} brand={'github'} type="brand" /> : ''
+    }
+    {project.pweb.length > 0 ? <IconLink to={project.pweb} type="external-link-alt" /> : ''}
+
+    </div>)
+}
 export const Project = ({ project, ...props }) => (
     <div onClick={() => { }} onKeyUp={props.clickHandler} alt={project.pname} className={project.type === "photo" ? "spacing" : "small-space"} role="region">
         <div className="project" onClick={props.clickHandler} >
@@ -21,21 +33,14 @@ export const Project = ({ project, ...props }) => (
                     project.type === 'doc' ? <SheetSV /> :
                         project.type === 'webApp' ? <CodeSV /> :
                             <ShellSV />
-                }</div>
-
-                <div id="links">
-                    {/* when user hovers over project, reveal links */}
-                    {/* to only allow the images to link: !project.imgSrc */}
-                    {project.pgit.length > 1 ? <IconLink to={formatForGH(project)} brand={'github'} type="brand" /> : ''
-                    }
-                    {project.pweb.length > 0 ? <IconLink to={project.pweb} type="external-link-alt" /> : ''}
-
-                </div>
+                }</div>               
             </div>
+   
         </div>
         <h3 id="named"  >  {project.pname} </h3>
 
         <div>
+            {getIcons(project)}
             {/*  seo  */}
             <i aria-hidden="true" hidden><h4>{project.keywords.join(', ')}</h4></i>
         </div>

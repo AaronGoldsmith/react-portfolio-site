@@ -5,6 +5,7 @@
   top: 5%;
   z-index: 99;
 }
+
 #img-cont{
   width: 320px;
   min-height: 150px;
@@ -96,6 +97,9 @@
   }
   .card-header{
     left: 10%;
+  }
+  .side-item:hover{
+    border-bottom: 4px solid 
   }
 }
 @media screen and (max-width:600px){

@@ -7,7 +7,7 @@ const style =
   color:"#000000",
 }
 
-export const SheetSV =(props) => (<svg viewBox='10 0 44 64' width="100%" height="100%" style={style} className={props.className} xmlns="http://www.w3.org/2000/svg">
+export const SheetSV =(props) => (<svg viewBox='10 0 44 64' height="100%" style={style} className={props.className} xmlns="http://www.w3.org/2000/svg">
   <g transform="matrix(1.0124 0 0 1.0124 -.37266 -.37266)">
     <g transform="matrix(1.0384 0 0 1.0384 -1.1507 -1.1507)">
       <path d="m11.75 54.375v-48.75h27.688l8.812 8.813v39.937h-36.5z" display="block" fill={style.fill} stroke={style.stroke} />
